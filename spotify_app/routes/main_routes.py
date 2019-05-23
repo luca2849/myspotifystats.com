@@ -6,5 +6,4 @@ from spotify_app import application
 
 @application.route("/", methods=["GET"])
 def home():
-    print(session)
     return render_template("index.html", title="Home Page")

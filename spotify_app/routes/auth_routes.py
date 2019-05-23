@@ -29,8 +29,6 @@ def callback():
     }
     r = requests.post(url=endpoint, headers=headers, data=data)
     r_formatted = json.loads(r.text)
-    print(r.status_code)
-    print(r.text)
     if (r.status_code == 200):
         session["access_token"] = r_formatted["access_token"]
         session["refresh_token"] = r_formatted["refresh_token"]
