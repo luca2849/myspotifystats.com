@@ -1,0 +1,10 @@
+{% extends 'partials/template.html' %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+<div id="currently_playing">
+    <img src="{{current['img']}}" alt="">
+    <h2>{{ current["name"] }}</h2>
+    <h3>{{ current["artist"] }}</h3>
+    <h4>{{ current["album"] }} {{ current["release"] }}</h4>
+</div>
+{% endblock %}
