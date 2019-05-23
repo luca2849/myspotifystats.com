@@ -1,5 +1,6 @@
 {% extends 'partials/template.html' %}
 {% block title %}{{title}}{% endblock %}
 {% block content %}
+<p>{% if session["access_token"] %} {{ session["access_token"] }} {% endif %}</p>
 <p>This is the homepage, console test!</p>
 {% endblock %}
