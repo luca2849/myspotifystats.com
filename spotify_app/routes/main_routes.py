@@ -39,5 +39,4 @@ def currently_playing():
             }
             return render_template("app/current_song.html", title="Current Song", current=current)
         else:
-            return "Error"
-    return "HEllo"
+            return render_template("app/error.html", title="Error")
