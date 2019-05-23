@@ -1,6 +1,7 @@
 import requests, base64, json
 from spotify_app.conf.spotify_credentials import *
 from spotify_app.util.auth_functions import *
+from spotify_app.util.app_functions import *
 from flask import render_template, url_for, request, redirect, session, flash, g
 from spotify_app import application
 
@@ -10,12 +11,8 @@ def home():
 
 @application.route("/app/currently_playing", methods=["GET"])
 def currently_playing():
-    if (session.get("access_token")):
-        endpoint = 'https://api.spotify.com/v1/me/player/currently-playing'
-        headers = {
-            "Authorization": "Bearer " + session["access_token"]
-        }
-        resp = requests.get(url=endpoint, headers=headers)
+    if request_current_song() is not None:
+        resp = request_current_song()
         if (resp.status_code == 200):
             res = resp.json()["item"]
             current = {
