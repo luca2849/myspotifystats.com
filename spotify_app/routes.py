@@ -1,5 +1,6 @@
 import requests, base64, json
 from spotify_app.conf.spotify_credentials import *
+from spotify_app.util.auth_functions import *
 from flask import render_template, url_for, request, redirect, session, flash, g
 from spotify_app import application
 
@@ -33,9 +34,19 @@ def callback():
     }
     r = requests.post(url=endpoint, headers=headers, data=data)
     r_formatted = json.loads(r.text)
-    if (r_formatted.get("access_token")):
+    print(r.status_code)
+    print(r.text)
+    if (r.status_code == 200):
         session["access_token"] = r_formatted["access_token"]
         session["refresh_token"] = r_formatted["refresh_token"]
+        return redirect(url_for("home"))
+    else:
+        return redirect(url_for("auth_error"))
+
+@application.route("/auth/refresh")
+def token_refresh():
+    success = refresh_access_token()
+    if success:
         return redirect(url_for("home"))
     else:
         return redirect(url_for("auth_error"))
@@ -44,3 +55,7 @@ def callback():
 def auth_error():
     return render_template("auth/error.html")
     
+@application.route("/auth/logout")
+def logout():
+    session.clear()
+    return redirect(url_for("home"))
