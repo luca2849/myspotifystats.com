@@ -19,3 +19,20 @@ def refresh_access_token():
         return True
     else:
         return False
+
+def set_user_details():
+    if session.get("access_token"):
+        endpoint = 'https://api.spotify.com/v1/me'
+        headers = {
+            "Authorization": "Bearer " + session["access_token"]
+        }
+        resp = requests.get(url=endpoint, headers=headers)
+        if (resp.status_code == 200):
+            res = resp.json()
+            session["name"] = res["display_name"]
+            session["profile_img"] = res["images"][0]["url"]
+            return True
+        else:
+            return False
+    else:
+        return False

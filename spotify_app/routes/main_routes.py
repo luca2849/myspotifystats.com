@@ -6,12 +6,10 @@ from spotify_app import application
 
 @application.route("/", methods=["GET"])
 def home():
-    print(session)
     return render_template("index.html", title="Home Page")
 
 @application.route("/app/currently_playing", methods=["GET"])
 def currently_playing():
-    print(session)
     if (session.get("access_token")):
         endpoint = 'https://api.spotify.com/v1/me/player/currently-playing'
         headers = {
@@ -40,3 +38,5 @@ def currently_playing():
             return render_template("app/current_song.html", title="Current Song", current=current)
         else:
             return render_template("app/error.html", title="Error")
+    else:
+        return redirect(url_for('logcheck'))

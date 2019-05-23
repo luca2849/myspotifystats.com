@@ -1,6 +1,18 @@
 {% extends 'partials/template.html' %}
 {% block title %}{{title}}{% endblock %}
 {% block content %}
-<p>{% if session["access_token"] %} {{ session["access_token"] }} {% endif %}</p>
-<p>This is the homepage, console test!</p>
+<style>
+    body{
+        background-image: url('/static/img/bg.gif');
+        background-size: cover;
+    }
+</style>
+<div class="home">
+    <div class="section" id="banner">
+        <h1>Welcome to <br /><span id="banner_heading">MySpotifyStats.com</span></h1>
+    </div>
+    <div class="section" id="second">
+        <p>Second Section</p>
+    </div>
+</div>
 {% endblock %}

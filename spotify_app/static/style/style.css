@@ -39,8 +39,11 @@ body {
     color: white;
     text-decoration: none;
   }
-  #header div ul li a img{
-    max-height: 60px;
+  #header div ul li {
+    vertical-align: middle;
+  }
+  #header div ul li a #logo{
+    height: 60px;
     position: absolute;
     top: 10px;
     left: 10px;
@@ -51,7 +54,16 @@ body {
   .header-right{
     float: right;
   }
-
+  #profile_img{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    max-height: 60px;
+    border-radius: 50%;
+  }
+  #name_link{
+    margin-right: 10px;
+  }
   /* Currently Playing Styling */
 
   #currently_playing{
@@ -69,4 +81,33 @@ body {
     margin: 20px auto;
     width: 75%;
     text-align: center;
+  }
+
+  /* Home Page Styling */
+  .home{
+    background-image: url('/static/img/bg.png')!important;
+  }
+  .section{
+    height: 25em;
+    transform-origin: 100%;
+    z-index: -1;
+    text-align: center;
+  }
+  #banner{
+    transform: skewY(-2.3deg);
+    background: #1DB954;
+  }
+  #banner h1{
+    padding-top: 200px;
+    margin: 0;
+    transform: skewY(2.5deg);
+    transform-origin: 100%;
+  }
+  #second{
+    background: #1DB954;
+    margin-top: 15em;
+  }
+  #banner_heading{
+    font-size: 60px;
+    display: block;
   }
