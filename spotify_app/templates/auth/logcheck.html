@@ -1,0 +1,9 @@
+{% extends 'partials/template.html' %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+<div class="content">
+    <img src="{{ url_for('static', filename='img/warning.png') }}" alt="" style="max-width: 100px">
+    <h2>You need to be logged in to view this page!</h2>
+    <p>Please click <a href="{{ url_for('login') }}">here</a> to login</p>
+</div>
+{% endblock %}

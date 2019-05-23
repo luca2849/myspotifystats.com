@@ -33,9 +33,10 @@ def callback():
     if (r.status_code == 200):
         session["access_token"] = r_formatted["access_token"]
         session["refresh_token"] = r_formatted["refresh_token"]
+        set_user_details()
         return redirect(url_for("home"))
     else:
-        return redirect(url_for("auth_error"))
+        return redirect(url_for("login"))
 
 @application.route("/auth/refresh")
 def token_refresh():
@@ -43,7 +44,7 @@ def token_refresh():
     if success:
         return redirect(url_for("home"))
     else:
-        return redirect(url_for("auth_error"))
+        return redirect(url_for("login"))
 
 @application.route("/auth/error")
 def auth_error():
@@ -53,3 +54,7 @@ def auth_error():
 def logout():
     session.clear()
     return redirect(url_for("home"))
+
+@application.route("/auth/logcheck")
+def logcheck():
+    return render_template("auth/logcheck.html", title="Authorization Check")
