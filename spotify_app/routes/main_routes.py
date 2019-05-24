@@ -28,6 +28,7 @@ def currently_playing():
         # user is not logged in (has no access token)
         return redirect(url_for('logcheck'))
 
+# Route for an error in the application flow
 @application.route("/app/error", methods=["GET"])
 def app_error():
     return render_template('app/error.html', title="Application Error")
