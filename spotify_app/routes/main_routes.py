@@ -13,27 +13,13 @@ def home():
 def currently_playing():
     if request_current_song() is not None:
         resp = request_current_song()
-        if (resp.status_code == 200):
-            res = resp.json()["item"]
-            current = {
-                "name": res["name"],
-                "img": res["album"]["images"][0]["url"],
-                "album": res["album"]["name"],
-                "release": '(' + res["album"]["release_date"][0:4] + ')',
-                "artist": res["artists"][0]["name"]
-            }
-            return render_template("app/current_song.html", title="Current Song", current=current)
-        elif (resp.status_code == 204):
-            # no song is playing
-            current = {
-                "name": "No Song Playing",
-                "img": url_for('static', filename='img/pikachu.png'),
-                "album": "",
-                "release": "",
-                "artist": ""
-            }
+        current = set_current_song_return(resp)
+        if current is not None:
+            # Either 200 or 204 response code from HTTP request
             return render_template("app/current_song.html", title="Current Song", current=current)
         else:
-            return render_template("app/error.html", title="Error")
+            # HTTP error when getting current_song
+            return render_template("app/error.html", title="Error")           
     else:
+        # user is not logged in (has no access token)
         return redirect(url_for('logcheck'))

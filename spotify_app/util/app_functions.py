@@ -1,4 +1,4 @@
-from flask import session
+from flask import session, url_for
 import requests
 
 def request_current_song():
@@ -10,3 +10,27 @@ def request_current_song():
         return requests.get(url=endpoint, headers=headers)
     else:
         return None
+
+def set_current_song_return(resp):
+    if (resp.status_code == 200):
+        res = resp.json()["item"]
+        current = {
+            "name": res["name"],
+            "img": res["album"]["images"][0]["url"],
+            "album": res["album"]["name"],
+            "release": '(' + res["album"]["release_date"][0:4] + ')',
+            "artist": res["artists"][0]["name"]
+        }
+        return current
+    elif (resp.status_code == 204):
+        current = {
+            "name": "No Song Playing",
+            "img": url_for('static', filename='img/pikachu.png'),
+            "album": "To have a song show here, start one on your spotify",
+            "release": "",
+            "artist": ""
+        }
+        return current
+    else:
+        return None
+
