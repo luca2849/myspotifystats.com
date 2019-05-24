@@ -23,7 +23,11 @@ def currently_playing():
             return render_template("app/current_song.html", title="Current Song", current=current)
         else:
             # HTTP error when getting current_song
-            return render_template("app/error.html", title="Error")           
+            return redirect(url_for('app_error'))          
     else:
         # user is not logged in (has no access token)
         return redirect(url_for('logcheck'))
+
+@application.route("/app/error", methods=["GET"])
+def app_error():
+    return render_template('app/error.html', title="Application Error")
