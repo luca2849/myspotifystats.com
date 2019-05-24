@@ -1,6 +1,8 @@
 {% extends 'partials/template.html' %}
 {% block title %}{{title}}{% endblock %}
 {% block content %}
-<h1>We encountered an error when authorising you!</h1>
-<p>Please try to <a href="{{ url_for('login') }}">login</a> again.</p>
+<div class="content">
+    <h1>We encountered an error when authorising you!</h1>
+    <p>Please try to <a href="{{ url_for('login') }}">login</a> again.</p>
+</div>
 {% endblock %}
