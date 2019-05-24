@@ -3,6 +3,10 @@ from flask import session
 from spotify_app.conf.spotify_credentials import *
 
 def refresh_access_token():
+    '''
+    Function to use the users refresh token
+    to get a new access token when it expires
+    '''
     if (session["refresh_token"]):
         endpoint = "https://accounts.spotify.com/api/token"
         data = {
@@ -21,6 +25,12 @@ def refresh_access_token():
         return False
 
 def set_user_details():
+    '''
+    Function for setting the user's details
+    for use in the session, and for creating
+    elements such as the name and image at the
+    top right
+    '''
     if session.get("access_token"):
         endpoint = 'https://api.spotify.com/v1/me'
         headers = {
