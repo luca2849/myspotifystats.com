@@ -18,7 +18,7 @@
                 {% if session["name"] is defined %}
                 <ul class="logged_in_list">
                     <li><a href="{{ url_for('currently_playing') }}">Currently Playing</a></li>
-                    <li><a id="name_link" href="{{ url_for('home') }}">{{ session["name"] }}<img id="profile_img" src="{{ session['profile_img'] }}" alt=""></a></li>
+                    <li><a id="name_link" href="{{ url_for('profile') }}">{{ session["name"] }}<img id="profile_img" src="{{ session['profile_img'] }}" alt=""></a></li>
                 </ul>
                 {% else %}
                 <ul>
