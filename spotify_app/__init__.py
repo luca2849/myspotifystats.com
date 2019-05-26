@@ -7,3 +7,5 @@ application.config['UPLOAD_FOLDER'] = 'app/static/img'
 
 from spotify_app.routes import auth_routes
 from spotify_app.routes import main_routes
+from spotify_app.routes import user_routes
+from spotify_app.routes import app_routes
