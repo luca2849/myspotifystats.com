@@ -1,0 +1,80 @@
+{% extends 'partials/template.html' %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+
+<style>
+    .user_details{
+        margin: 0 auto 2em auto;
+        width: 66%;
+        box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.2);
+        text-align: left;
+        padding: 20px;
+    }
+    .user_details .info{
+        margin-left: 20%;
+    }
+    #user_img img{
+        float: left;
+        margin: 10px;
+    }
+    .time_container > div {
+        display: inline-block;
+        *display: inline; /* For IE7 */
+        zoom: 1; /* Trigger hasLayout */
+        width: 33%;
+        text-align: center;
+    }
+    #info {
+        text-align: center;
+    }
+</style>
+
+<div class="content">
+    <h1>User Profile - {{ user_details.display_name }}</h1>
+    <div class="user_details">
+        <div id="user_img">
+            <img src="{{ user_details.images[0].url }}" alt="">
+        </div>
+        <div class="info">
+            <p>Name - <b>{{ user_details.display_name }}</b></p>
+            <p>Email - <b>{{ user_details.email }}</b></p>
+            <p>Date of Birth - <b>{{ birthdate}}</b></p>
+            <p>Follower Count - <b>{{ user_details.followers.total }}</b></p>
+            <p>Account Type - <b>{{ user_details.product[0]|upper}}{{user_details.product[1:]}}</b></p>
+            <p>Spotify Profile - <b><a target="_blank" href="{{ user_details.external_urls.spotify }}">{{ user_details.external_urls.spotify }}</a></b></p>
+        </div>
+    </div>
+    <h2>Top Tracks</h2>
+    <div class="user_details">
+        <div class="time_container">
+            <div class="time_span">
+                <h3>Last 4 Weeks</h3>
+                {% for track in short_user_top_tracks %}
+                    <p>{{ track.name }}</p>
+                {% endfor %}
+                </ol>
+            </div>
+            <div class="time_span">
+                <h3>Approx. Last 6 Months</h3>
+                    {% for track in med_user_top_tracks %}
+                        <p>{{ track.name }}</p>
+                    {% endfor %}
+            </div>
+            <div class="time_span">
+                <h3>> 2 Years</h3>
+                    {% for track in long_user_top_tracks %}
+                        <p>{{ track.name }}</p>
+                    {% endfor %}
+            </div>
+            <p id="info">Click <a href="">here</a> to view more info on your top tracks</p>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- {% for track in user_top_tracks %}
+    <p>{{ track.name }} - {{ track.artists[0].name }}</p>
+{% endfor %} -->
+
+{% endblock %}
