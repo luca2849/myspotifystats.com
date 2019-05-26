@@ -20,11 +20,11 @@
                     <li><a href="{{ url_for('currently_playing') }}">Currently Playing</a></li>
                     <li><a href="{{ url_for('logout') }}">Logout</a></li>
                     <li><a id="name_link" href="{{ url_for('home') }}">{{ session["name"] }}<img id="profile_img" src="{{ session['profile_img'] }}" alt=""></a></li>
-                    <li></li>
                 </ul>
                 {% else %}
                 <ul>
                     <li><a href="{{ url_for('home') }}">Something Else</a></li>
+                    <li><a href="{{ url_for('home') }}">Contact</a></li>
                     <li><a href="{{ url_for('login') }}">Login</a></li>
                 </ul>
                 {% endif %}
