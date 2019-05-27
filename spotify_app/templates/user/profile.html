@@ -69,6 +69,31 @@
             <p id="info">Click <a href="">here</a> to view more info on your top tracks</p>
         </div>
     </div>
+    <h2>Top Artists</h2>
+    <div class="user_details">
+        <div class="time_container">
+            <div class="time_span">
+                <h3>Last 4 Weeks</h3>
+                {% for artist in short_user_top_artists %}
+                    <p>{{ artist.name }}</p>
+                {% endfor %}
+                </ol>
+            </div>
+            <div class="time_span">
+                <h3>Approx. Last 6 Months</h3>
+                    {% for artist in med_user_top_artists %}
+                        <p>{{ artist.name }}</p>
+                    {% endfor %}
+            </div>
+            <div class="time_span">
+                <h3>> 2 Years</h3>
+                    {% for artist in long_user_top_artists %}
+                        <p>{{ artist.name }}</p>
+                    {% endfor %}
+            </div>
+            <p id="info">Click <a href="">here</a> to view more info on your top artists</p>
+        </div>
+    </div>
 
 </div>
 
