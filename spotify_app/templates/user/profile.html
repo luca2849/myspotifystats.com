@@ -27,6 +27,9 @@
     #info {
         text-align: center;
     }
+    #playlist_img{
+        max-width: 50%;
+    }
 </style>
 
 <div class="content">
@@ -94,12 +97,20 @@
             <p id="info">Click <a href="">here</a> to view more info on your top artists</p>
         </div>
     </div>
+    <h2>Most Recent Playlists</h2>
+    <div class="user_details">
+        <div class="time_container">
+            {% for i in range(0, 3) %}
+            <div class="time_span">
+                <img id="playlist_img" src="{{ user_playlists[i].images[0].url }}" alt="">
+                <p>{{ user_playlists[i].name }}</p>
+            </div>
+            {% endfor %}
+            <p id="info">Click <a href="">here</a> to view more info on your playlists</p>
+        </div>
+    </div>
 
 </div>
 
-
-<!-- {% for track in user_top_tracks %}
-    <p>{{ track.name }} - {{ track.artists[0].name }}</p>
-{% endfor %} -->
 
 {% endblock %}
