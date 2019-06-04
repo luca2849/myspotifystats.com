@@ -43,3 +43,12 @@ def set_current_song_return(resp):
 	else:
 		return None
 
+def get_recently_played():
+	if session.get("access_token") != "":
+		endpoint = "https://api.spotify.com/v1/me/player/recently-played?type=track&limit=5"
+		headers = {
+			"Authorization": "Bearer " + session["access_token"]
+		}
+		return requests.get(url=endpoint, headers=headers)
+	else:
+		return None

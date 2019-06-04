@@ -22,7 +22,7 @@ def profile():
             # Format date
             bdate = user_details["birthdate"]
             formatted = datetime.strptime(bdate, '%Y-%m-%d')
-            formatted = formatted.strftime('%m/%d/%Y')
+            formatted = formatted.strftime('%d/%m/%Y')
             return render_template("user/profile.html", title="Your Profile", user_details=user_details, user_playlists=user_playlists["items"], med_user_top_tracks=med_user_top_tracks["items"], short_user_top_tracks=short_user_top_tracks["items"], long_user_top_tracks=long_user_top_tracks["items"], birthdate=formatted, short_user_top_artists=short_user_top_artists["items"], med_user_top_artists=med_user_top_artists["items"], long_user_top_artists=long_user_top_artists["items"])
         else:
             return redirect(url_for("token_refresh"))
