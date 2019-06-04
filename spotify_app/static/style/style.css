@@ -7,12 +7,12 @@ body {
     color: #00B7FF;
   }
   
-  #current_track{
+  #currently_playing{
     width: 50%;
     margin: 0 auto;
     text-align: center;
   }
-  #current_track img{
+  #currently_playing img{
     max-width: 450px;
     box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
     margin: 15px 0;
@@ -66,17 +66,6 @@ body {
   #name_link{
     margin-right: 10px;
   }
-  /* Currently Playing Styling */
-
-  #currently_playing{
-    margin: 20px auto;
-    width: 75%;
-    text-align: center;
-  }
-  #currently_playing img{
-    max-height: 500px;
-    box-shadow: -5px 10px 20px 10px rgba(0, 0, 0, 0.2);
-  }
 
   /* General Styling */
   .content{
@@ -112,4 +101,37 @@ body {
   #banner_heading{
     font-size: 60px;
     display: block;
+  }
+
+  .recently_played{
+    width: 70%;
+    margin: 2% auto 0 auto;
+    text-align: justify;
+  }
+
+  .recently_played div{
+    box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: 15%;
+    height: 400px;
+  }
+
+  .recently_played > div{
+    width: 15%; /* Declare your value. Can be in relative units. */
+    display: inline-block;
+    vertical-align: top;
+  }
+  .recently_played:after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+  }
+  .recently_played div img{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .recently_played div p{
+    text-align: center;
   }

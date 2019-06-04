@@ -48,7 +48,10 @@ def callback():
 def token_refresh():
     success = refresh_access_token()
     if success:
-        return redirect(url_for("home"))
+        if "url" in session:
+            return redirect(session["url"])
+        else:
+            return redirect(url_for("home"))
     else:
         return redirect(url_for("login"))
 

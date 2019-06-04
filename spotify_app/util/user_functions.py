@@ -36,7 +36,7 @@ def get_user_top_tracks(term):
             "Authorization": "Bearer " + session["access_token"]
         }
         data = {
-            "limit": 5,
+            "limit": 10,
             "offset": 0,
             "time_range": term
         }
@@ -55,7 +55,7 @@ def get_user_top_artists(term):
             "Authorization": "Bearer " + session["access_token"]
         }
         data = {
-            "limit": 5,
+            "limit": 10,
             "offset": 0,
             "time_range": term
         }
