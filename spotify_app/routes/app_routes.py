@@ -15,8 +15,6 @@ def currently_playing():
         recent = get_recently_played()
         if current and recent is not None:
             # Either 200 (success) or 204(success but no content) response code from HTTP request
-            print(json.loads(recent.text)["items"][0]["track"]["name"])
-
             return render_template("app/current_song.html", title="Current Song", current=current, recent=json.loads(recent.text)["items"])
         else:
             session["url"] = url_for("currently_playing")
