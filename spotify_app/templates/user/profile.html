@@ -33,7 +33,6 @@
 </style>
 
 <div class="content">
-    <h1>User Profile - {{ user_details.display_name }}</h1>
     <div class="user_details">
         <div id="user_img">
             <img src="{{ user_details.images[0].url }}" alt="">
@@ -44,7 +43,7 @@
             <p>Date of Birth - <b>{{ birthdate}}</b></p>
             <p>Follower Count - <b>{{ user_details.followers.total }}</b></p>
             <p>Account Type - <b>{{ user_details.product[0]|upper}}{{user_details.product[1:]}}</b></p>
-            <p>Spotify Profile - <b><a target="_blank" href="{{ user_details.external_urls.spotify }}">{{ user_details.external_urls.spotify }}</a></b></p>
+            <p>Spotify Profile - <b><a class="in_text_link" target="_blank" href="{{ user_details.external_urls.spotify }}">{{ user_details.external_urls.spotify }}</a></b></p>
         </div>
     </div>
     <h2>Top Tracks</h2>
@@ -68,7 +67,7 @@
                         <p>{{ track.name }}</p>
                     {% endfor %}
             </div>
-            <p id="info">Click <a href="">here</a> to view more info on your top tracks</p>
+            <p id="info">Click <a class="in_text_link" href="">here</a> to view more info on your top tracks</p>
         </div>
     </div>
     <h2>Top Artists</h2>
@@ -92,7 +91,7 @@
                         <p>{{ artist.name }}</p>
                     {% endfor %}
             </div>
-            <p id="info">Click <a href="">here</a> to view more info on your top artists</p>
+            <p id="info">Click <a class="in_text_link" href="">here</a> to view more info on your top artists</p>
         </div>
     </div>
     <h2>Top Playlists</h2>
@@ -104,7 +103,7 @@
                 <p>{{ user_playlists[i].name }}</p>
             </div>
             {% endfor %}
-            <p id="info">Click <a href="">here</a> to view more info on your playlists</p>
+            <p id="info">Click <a class="in_text_link" href="">here</a> to view more info on your playlists</p>
         </div>
     </div>
 

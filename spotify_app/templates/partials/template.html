@@ -13,11 +13,15 @@
 </head>
 <body>
     <div class="row">
-        <img src="static/img/home_img.png" alt="MySpotifyStats Logo" class="logo">
-        <ul class="main_nav">
-            <li><a href="#">Something</a></li>
-            <li><a href="#">Something</a></li>
-            <li><a href="#">Login</a></li>
+        <img src="{{url_for('static', filename='img/home_img.png')}}" alt="MySpotifyStats Logo" class="logo" >
+        <ul class="main_nav non_home">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="#">About</a></li>
+            {% if session['access_token'] %}
+            <li><a href="{{url_for('profile')}}">{{session['name']}}</a></li>
+            {% else %}
+            <li><a href="{{url_for('login')}}">Login</a></li>
+            {% endif %}
         </ul>
     </div>
     {% block content %}
