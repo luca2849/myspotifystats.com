@@ -5,7 +5,6 @@ from spotify_app.util.user_functions import get_user_details, get_user_playlists
 
 @application.route("/user/profile", methods=["GET"])
 def profile():
-    print(session)
     # Check if logged in, show user page
     if "access_token" in session:
         # Request user details and store
