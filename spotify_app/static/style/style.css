@@ -267,3 +267,116 @@ section{
 .non_home{
   margin-right: 25%;
 }
+/* ================================ */
+/*  CONTACT */
+/* ================================ */
+.section_contact{
+  background: #232121;
+}
+.contact_form{
+    width: 60%;
+    margin: 0 auto;
+}
+input[type=text], input[type=email], select, textarea{
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #555;
+    box-shadow: 5px 10px 10px 6px rgba(0, 0, 0, 0.7);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+textarea{
+    height: 100px;
+}
+input[type=checkbox]{
+    margin: 10px 5px 10px 0;
+}
+*:focus {outline: none}
+input[type=submit]{
+  color: #191414;
+  background: #1DB954;
+  border: 2px solid transparent;
+}
+input[type=submit]:hover{
+  border: 2px solid #1DB954;
+}
+
+.btn:link, .btn:visited{
+  text-decoration: none;
+  color: #191414;
+  border: 2px solid transparent;
+  outline: none;
+  margin-right: 10px;
+}
+.btn:hover, .btn:active{
+  text-decoration: none;
+}
+
+.btn_full:link, .btn_full:visited{
+  text-decoration: none;
+  background: #1DB954;
+  outline: none;
+  transition: border 0.5s, background-color 0.5s, color 0.5s;
+}
+.btn_full:hover, .btn_full:active{
+  color: #21e064;
+  background-color: #191414;
+  border: 2px solid #1DB954;
+}
+
+.btn_ghost:link, .btn_ghost:visited{
+  border: 2px solid #1DB954;
+  color: #FFF;
+  transition: border 0.5s, background-color 0.5s, color 0.5s;
+  -webkit-transition: border 0.5s, background-color 0.5s, color 0.5s;
+  -moz-transition: border 0.5s, background-color 0.5s, color 0.5s;
+  -ms-transition: border 0.5s, background-color 0.5s, color 0.5s;
+  -o-transition: border 0.5s, background-color 0.5s, color 0.5s;
+}
+.btn_ghost:hover, .btn_ghost:active{
+  border: 2px solid transparent;
+  background-color: #191919;
+  color: #1DB954;
+}
+.btn_scroll:link, .btn_scroll:visited{
+  position: absolute;
+  bottom: 0;
+  right: 48%;
+  padding: 10px;
+  margin: 10px 10px 20px 10px;
+  background-color: #1DB954;
+  color: #191414;
+  height: 60px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transition: color 0.5s, border 0.5s, background-color 0.5s;
+  -webkit-transition: color 0.5s, border 0.5s, background-color 0.5s;
+  -moz-transition: color 0.5s, border 0.5s, background-color 0.5s;
+  -ms-transition: color 0.5s, border 0.5s, background-color 0.5s;
+  -o-transition: color 0.5s, border 0.5s, background-color 0.5s;
+}
+.btn_scroll:hover, .btn_scroll:active{
+  color: #1DB954;
+  border: 2px solid #1DB954;
+  background-color: #191414;
+}
+.btn_scroll #chev_down{
+  font-size: 200%;
+}
+footer{
+  padding: 10px;
+}
+footer p{
+  text-align: center;
+  margin-bottom: 0px;
+}
+#footer_spacer{
+  margin: 0 20px;
+}
