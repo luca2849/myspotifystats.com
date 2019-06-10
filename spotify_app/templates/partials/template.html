@@ -5,33 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,300italic" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/normalize.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/grid.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <div id="header">
-            <div class="header-left">
-                <ul>
-                    <li><a href="{{ url_for('home') }}"><img id="logo" src="{{ url_for('static', filename='img/home_img.png') }}" alt=""></a></li>
-                </ul>
-            </div>
-            <div class="header-right">
-                {% if session["name"] is defined %}
-                <ul class="logged_in_list">
-                    <li><a href="{{ url_for('currently_playing') }}">Currently Playing</a></li>
-                    <li><a id="name_link" href="{{ url_for('profile') }}">{{ session["name"] }}<img id="profile_img" src="{{ session['profile_img'] }}" alt=""></a></li>
-                </ul>
-                {% else %}
-                <ul>
-                    <li><a href="{{ url_for('home') }}">Something Else</a></li>
-                    <li><a href="{{ url_for('home') }}">Contact</a></li>
-                    <li><a href="{{ url_for('login') }}">Login</a></li>
-                </ul>
-                {% endif %}
-            </div>
-         </div>
+    <div class="row">
+        <img src="static/img/home_img.png" alt="MySpotifyStats Logo" class="logo">
+        <ul class="main_nav">
+            <li><a href="#">Something</a></li>
+            <li><a href="#">Something</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </div>
     {% block content %}
 
     {% endblock %}
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 </body>
 </html>
