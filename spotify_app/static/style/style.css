@@ -8,12 +8,12 @@ body {
   }
   
   #currently_playing{
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
     text-align: center;
   }
   #currently_playing img{
-    max-width: 450px;
+    max-width:  40%;
     box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
     margin: 15px 0;
   }
@@ -113,7 +113,7 @@ body {
     box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
     display: inline-block;
     width: 15%;
-    height: 400px;
+    height: 20vw;
   }
 
   .recently_played > div{
