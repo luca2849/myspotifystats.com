@@ -22,6 +22,7 @@
                 <li><a href="#">About</a></li>
                 {% if session['access_token'] %}
                     <li><a href="{{url_for('profile')}}">{{session['name']}}</a></li>
+                    <li><a href="{{url_for('logout')}}">Logout</a></li>
                 {% else %}
                     <li><a href="{{url_for('login')}}">Login</a></li>
                 {% endif %}
@@ -29,6 +30,11 @@
         </div>
   <div class="textbox">
     <h1>Welcome to <br> myspotifystats.com</h1>
+    <a class="btn btn_full section1" href="#">What does this site do?</a>
+    <a class="btn btn_ghost section4" href="#">Available tools</a>
+  </div>
+  <div class="scroll">
+      <a class="btn_scroll" href="javascript:void(0);"><ion-icon id="chev_down" name="arrow-down"></ion-icon></a>
   </div>
 </header>
 <section class="section_info">
@@ -58,7 +64,7 @@
             <ion-icon name="call" class="icon"></ion-icon>
             <h3>Contact Us</h3>
             <p>
-                If there are any issues, improvements or suggestions please using the <a href="#" class="in_text_link">contact form</a> to notify the development team.
+                If there are any issues, improvements or suggestions please using the <a href="javascript:void(0);" class="contact_btn in_text_link">contact form</a> to notify the development team.
             </p>
         </div>
         <div class="col span-1-of-4 box">
@@ -75,7 +81,7 @@
     <div class="row">
         <div class="works_step">
             <div>1</div>
-            <p><a class="in_text_link" href="">Login</a> to the website with spotify. We don't store any of your data</p>
+            <p><a class="in_text_link" href="{{url_for('login')}}">Login</a> to the website with spotify. We don't store any of your data</p>
         </div>
         <div class="works_step">
             <div>2</div>
@@ -91,6 +97,108 @@
         </div>
     </div>
 </section>
+<section class="section_tools">
+    <h2>Tools Available</h2>
+    <div class="row">
+        <div class="col span1-of-3 box">
+            <ion-icon name="headset" class="icon"></ion-icon>
+            <h3>Currently Playing</h3>
+            <a class="btn btn_full" href="{{ url_for('currently_playing') }}">Here!</a>
+        </div>
+        <div class="col span1-of-3 box">
+            <ion-icon name="trending-up" class="icon"></ion-icon>
+            <h3>Top tracks and artists</h3>
+            <a class="btn btn_full" href="{{ url_for('profile') }}">Here!</a>
+        </div>
+        <div class="col span1-of-3 box">
+            <ion-icon name="call" class="icon"></ion-icon>
+            <h3>Contact</h3>
+            <a class="btn btn_full contact_btn " href="javascript:void(0);">Here!</a>
+        </div>
+    </div>
+</section>
+<section class="section_contact">
+    <h2>We're happy to hear from you</h2>
+        <div class="row">
+            <form action="#" method="POST" class="contact_form">
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" name="name" id="name" placeholder="Your name..." required="required" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="email" name="email" id="email" placeholder="Your email..." required="required" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="find_us">How did you find us?</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <select name="find_us" id="find_us">
+                            <option value="placeholder" disabled="disabled" selected="selected">Select One</option>
+                            <option value="friends">Friends</option>
+                            <option value="search">Search Engine</option>
+                            <option value="advert">Advertisment</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label for="news">Your message</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <textarea name="news" id="news" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                        <label>&nbsp;</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input class="btn btn_ghost" type="submit" value="Submit">
+                    </div>
+                </div>
+           </div>
+        </form>
+    </div>
+</section>
+<footer>
+    <p>Luca Passariello 2019 <span id="footer_spacer">|</span><a class="in_text_link" target="_blank" href="http://www.lucapassariello.co.uk">Portfolio</a></p>
+</footer>
 <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>
+    $('.contact_btn').click(function(){
+        $('html, body').animate({
+            scrollTop: $('.section_contact').offset().top
+        }, 1000)
+    })
+    $('.section1').click(function(){
+        $('html, body').animate({
+            scrollTop: $('.section_info').offset().top
+        }, 1000)
+    })
+    $('.section4').click(function(){
+        $('html, body').animate({
+            scrollTop: $('.section_tools').offset().top
+        }, 1000)
+    })
+    $('.btn_scroll').click(function(){
+        $('html, body').animate({
+            scrollTop: $('.section_info').offset().top
+        }, 1000)
+    })
+    
+</script>
 </body>    
 </html>

@@ -19,6 +19,7 @@
             <li><a href="#">About</a></li>
             {% if session['access_token'] %}
             <li><a href="{{url_for('profile')}}">{{session['name']}}</a></li>
+            <li><a href="{{url_for('logout')}}">Logout</a></li>
             {% else %}
             <li><a href="{{url_for('login')}}">Login</a></li>
             {% endif %}
