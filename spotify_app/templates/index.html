@@ -18,20 +18,24 @@
         <div class="row top">
             <img src="static/img/home_img.png" alt="MySpotifyStats Logo" class="logo">
             <ul class="main_nav">
-                <li><a href="#">Home</a></li>
+                <li><a href="{{url_for('home')}}">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Login</a></li>
+                {% if session['access_token'] %}
+                    <li><a href="{{url_for('profile')}}">{{session['name']}}</a></li>
+                {% else %}
+                    <li><a href="{{url_for('login')}}">Login</a></li>
+                {% endif %}
             </ul>
         </div>
   <div class="textbox">
     <h1>Welcome to <br> myspotifystats.com</h1>
   </div>
 </header>
-<section class="info">
+<section class="section_info">
     <h2>What can i do?</h2>
     <div class="row">
         <p class="short_copy">
-            To use the app properly, you should login with Spotify <a class="in_text_link" href="">here</a>.
+            To use the app properly, you should login with Spotify <a class="in_text_link" href="{{url_for('login')}}">here</a>.
         </p>
     </div>
     <div class="row">
@@ -39,7 +43,7 @@
             <ion-icon name="headset" class="icon"></ion-icon>
             <h3>See what's playing</h3>
             <p>
-                By using the <a class="in_text_link" href="http://www.myspotifystats.com/app/currently_playing">
+                By using the <a class="in_text_link" href="{{url_for('currently_playing')}}">
                 currently playing</a> app, you can see what is playing and what has played recently.
             </p>
         </div>
@@ -47,7 +51,7 @@
             <ion-icon name="trending-up" class="icon"></ion-icon>
             <h3>Top tracks and artists</h3>
             <p>
-                From your <a href="" class="in_text_link">profile</a>, you can see your top artists and tracks from varying timescales.
+                From your <a href="{{url_for('profile')}}" class="in_text_link">profile</a>, you can see your top artists and tracks from varying timescales.
             </p>
         </div>
         <div class="col span-1-of-4 box">
@@ -66,10 +70,27 @@
         </div>
     </div>
 </section>
-<section class="temp">
-    <h2>Temporary Section</h2>
+<section class="section_steps">
+    <h2>How does it work?</h2>
+    <div class="row">
+        <div class="works_step">
+            <div>1</div>
+            <p><a class="in_text_link" href="">Login</a> to the website with spotify. We don't store any of your data</p>
+        </div>
+        <div class="works_step">
+            <div>2</div>
+            <p>When you are signed in, you are given a token which is attached to your account</p>
+        </div>
+        <div class="works_step">
+            <div>3</div>
+        <p>This token lasts an hour and is used to get data from spotify for your account</p>
+        </div>
+        <div class="works_step">
+            <div>4</div>
+            <p>This data is then formatted and displayed to you!</p>
+        </div>
+    </div>
 </section>
-    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
-    </body>
-    
-    </html>
+<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+</body>    
+</html>
