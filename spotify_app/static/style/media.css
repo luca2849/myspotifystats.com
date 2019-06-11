@@ -2,6 +2,9 @@
 @media only screen and (max-width: 480px){
     section{ padding: 25px 0; }
     .contact_form{ width: 100%; }
+    body{
+        font-size: 12px;
+    }
 }
 
 /* iPhone 6 and later (larger phones) 480px to 767px [1px smaller than iPad] */
