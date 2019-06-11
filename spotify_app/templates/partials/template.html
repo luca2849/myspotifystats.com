@@ -17,11 +17,12 @@
         <a href="{{url_for('home')}}"><img src="{{url_for('static', filename='img/home_img.png')}}" alt="MySpotifyStats Logo" class="logo"></a>
         <ul class="main_nav non_home">
             <li><a href="{{url_for('home')}}">Home</a></li>
-            <li><a href="#">About</a></li>
             {% if session['access_token'] %}
-            <li><a href="{{url_for('profile')}}">{{session['name']}}</a></li>
+            <li><a href="{{url_for('currently_playing')}}">Currently Playing</a></li>
+            <li><a href="{{url_for('profile')}}">{{session['firstname']}}</a></li>
             <li><a href="{{url_for('logout')}}">Logout</a></li>
             {% else %}
+            <li><a href="#">About</a></li>
             <li><a href="{{url_for('login')}}">Login</a></li>
             {% endif %}
         </ul>
