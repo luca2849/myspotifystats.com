@@ -11,6 +11,8 @@
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/normalize.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/grid.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/media.css') }}">
+
     <title>MySpotifyStats | Home</title>
 </head>
 
@@ -19,8 +21,7 @@
     <div class="row top">
         <a href="{{url_for('home')}}"><img src="{{url_for('static', filename='img/home_img.png')}}" alt="MySpotifyStats Logo" class="logo"></a>
         <ul class="main_nav">
-            <li><a href="{{url_for('home')}}">Home</a></li>
-                {% if session['access_token'] %}
+            {% if session['access_token'] %}
             <li><a href="{{url_for('currently_playing')}}">Currently Playing</a></li>
             <li><a href="{{url_for('profile')}}">{{session['firstname']}}</a></li>
             <li><a href="{{url_for('logout')}}">Logout</a></li>
@@ -115,8 +116,8 @@
         </div>
         <div class="col span1-of-3 box">
             <ion-icon name="call" class="icon"></ion-icon>
-            <h3>Contact</h3>
-            <a class="btn btn_full contact_btn " href="javascript:void(0);">Here!</a>
+            <h3 class="cont_title">Contact</h3>
+            <a class="btn btn_full contact_btn" href="javascript:void(0);">Here!</a>
         </div>
     </div>
 </section>
