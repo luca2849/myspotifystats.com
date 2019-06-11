@@ -202,6 +202,7 @@ section{
   color: #1DB954;
   text-decoration: none;
   transition: color 0.5s, border-bottom 0.5s;
+  border-bottom: 2px solid transparent;
   -webkit-transition: color 0.5s, border-bottom 0.5s;
   -moz-transition: color 0.5s, border-bottom 0.5s;
   -ms-transition: color 0.5s, border-bottom 0.5s;
@@ -211,6 +212,19 @@ section{
   color: #FFF;
   border-bottom: 2px solid #1DB954;
 }
+.reverse_link:link, .reverse_link:visited{
+  color: #FFF;
+  text-decoration: none;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+}
+.reverse_link:hover, .reverse_link:active{
+  color: #1DB954;
+}
+
 .long_copy{
     line-height: 145%;
     width: 70%;
@@ -307,6 +321,7 @@ input[type=submit]:hover{
 }
 
 .btn:link, .btn:visited{
+  font-weight: 400;
   text-decoration: none;
   color: #191414;
   border: 2px solid transparent;
@@ -314,9 +329,9 @@ input[type=submit]:hover{
   margin-right: 10px;
 }
 .btn:hover, .btn:active{
+  outline: none;
   text-decoration: none;
 }
-
 .btn_full:link, .btn_full:visited{
   text-decoration: none;
   background: #1DB954;
@@ -426,4 +441,13 @@ footer p{
   overflow: hidden;
   max-width: 75%;
   text-overflow: ellipsis;
+}
+.section_top_artists{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/jeff.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.section_more_info{
+  background: #232121;
 }
