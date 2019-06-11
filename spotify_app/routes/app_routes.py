@@ -19,7 +19,7 @@ def currently_playing():
         else:
             session["url"] = url_for("currently_playing")
             # HTTP error when getting current_song
-            return redirect(url_for('app_error'))          
+            return redirect(url_for('token_refresh'))          
     else:
         # user is not logged in (has no access token)
         return redirect(url_for('logcheck'))

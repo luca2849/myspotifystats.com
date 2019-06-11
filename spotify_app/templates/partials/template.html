@@ -10,13 +10,13 @@
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/normalize.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/grid.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/media.css') }}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     <div class="row top">
         <a href="{{url_for('home')}}"><img src="{{url_for('static', filename='img/home_img.png')}}" alt="MySpotifyStats Logo" class="logo"></a>
         <ul class="main_nav non_home">
-            <li><a href="{{url_for('home')}}">Home</a></li>
             {% if session['access_token'] %}
             <li><a href="{{url_for('currently_playing')}}">Currently Playing</a></li>
             <li><a href="{{url_for('profile')}}">{{session['firstname']}}</a></li>

@@ -37,8 +37,12 @@
   background-position: center;
   background-attachment: fixed;
 }
+.section_recently_played{
+  background: #232121;
+}
 .recent{
   width: 25%;
+  font-size: 80%;
 }
 .recent img{
   width: 100%;
@@ -63,6 +67,7 @@
 .top{
   position: relative;
   padding-bottom: 40px;
+  padding: 10px;
 }
 .main_nav{
     position: absolute;
@@ -71,7 +76,8 @@
     list-style: none;
     margin-top: 55px;
     font-size: 120%;
-}
+    padding: 10px;
+  }
 .main_nav li{
     display: inline-block;
     margin-left: 40px;
