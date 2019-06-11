@@ -1,0 +1,61 @@
+<!-- <div class="content">
+    <h2>Top Tracks</h2>
+    <div class="user_details">
+        <div class="time_container">
+            <div class="time_span">
+                <h3>Last 4 Weeks</h3>
+                {% for track in short_user_top_tracks %}
+                    <p>{{ track.name }}</p>
+                {% endfor %}
+            </div>
+            <div class="time_span">
+                <h3>Approx. Last 6 Months</h3>
+                    {% for track in med_user_top_tracks %}
+                        <p>{{ track.name }}</p>
+                    {% endfor %}
+            </div>
+            <div class="time_span">
+                <h3>> 2 Years</h3>
+                    {% for track in long_user_top_tracks %}
+                        <p>{{ track.name }}</p>
+                    {% endfor %}
+            </div>
+            <p id="info">Click <a class="in_text_link" href="">here</a> to view more info on your top tracks</p>
+        </div>
+    </div>
+    <h2>Top Artists</h2>
+    <div class="user_details">
+        <div class="time_container">
+            <div class="time_span">
+                <h3>Last 4 Weeks</h3>
+                {% for artist in short_user_top_artists %}
+                    <p>{{ artist.name }}</p>
+                {% endfor %}
+            </div>
+            <div class="time_span">
+                <h3>Approx. Last 6 Months</h3>
+                    {% for artist in med_user_top_artists %}
+                        <p>{{ artist.name }}</p>
+                    {% endfor %}
+            </div>
+            <div class="time_span">
+                <h3>> 2 Years</h3>
+                    {% for artist in long_user_top_artists %}
+                        <p>{{ artist.name }}</p>
+                    {% endfor %}
+            </div>
+            <p id="info">Click <a class="in_text_link" href="">here</a> to view more info on your top artists</p>
+        </div>
+    </div>
+    <h2>Top Playlists</h2>
+    <div class="user_details">
+        <div class="time_container">
+            {% for i in range(0, 3) %}
+            <div class="time_span">
+                <img id="playlist_img" src="{{ user_playlists[i].images[0].url }}" alt="">
+                <p>{{ user_playlists[i].name }}</p>
+            </div>
+            {% endfor %}
+            <p id="info">Click <a class="in_text_link" href="">here</a> to view more info on your playlists</p>
+        </div>
+    </div> -->

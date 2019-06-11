@@ -125,7 +125,9 @@
   }
 
 
-
+.main_nav_temp a, .main_nav_temp ul{
+  margin-bottom: 2%;
+}
 
 html, body{
   font-family: 'Raleway', 'Arial', sans-serif;
@@ -265,7 +267,7 @@ section{
     margin-bottom: 80px;
 }
 .non_home{
-  margin-right: 25%;
+  margin-right: 15%;
 }
 /* ================================ */
 /*  CONTACT */
@@ -330,14 +332,13 @@ input[type=submit]:hover{
 .btn_ghost:link, .btn_ghost:visited{
   border: 2px solid #1DB954;
   color: #FFF;
-  transition: border 0.5s, background-color 0.5s, color 0.5s;
-  -webkit-transition: border 0.5s, background-color 0.5s, color 0.5s;
-  -moz-transition: border 0.5s, background-color 0.5s, color 0.5s;
-  -ms-transition: border 0.5s, background-color 0.5s, color 0.5s;
-  -o-transition: border 0.5s, background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s, color 0.5s;
+  -webkit-transition: background-color 0.5s, color 0.5s;
+  -moz-transition: background-color 0.5s, color 0.5s;
+  -ms-transition: background-color 0.5s, color 0.5s;
+  -o-transition: background-color 0.5s, color 0.5s;
 }
 .btn_ghost:hover, .btn_ghost:active{
-  border: 2px solid transparent;
   background-color: #191919;
   color: #1DB954;
 }
@@ -347,10 +348,9 @@ input[type=submit]:hover{
   right: 48%;
   padding: 10px;
   margin: 10px 10px 20px 10px;
-  background-color: #1DB954;
-  color: #191414;
+  color: #FFF;
   height: 60px;
-  border: 2px solid transparent;
+  border: 2px solid #1DB954;
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
@@ -379,4 +379,51 @@ footer p{
 }
 #footer_spacer{
   margin: 0 20px;
+}
+/* Profile */
+.section_user_details{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/katy_perry.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+#user_img{
+  float:left;
+  margin-right: 30px;
+}
+#user_img img{
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.user_info{
+  list-style-type: none;
+}
+.row_content{
+  width: 800px;
+  margin: 0 auto;
+}
+.track_container{
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+.track_container img{
+  width: 75px;
+  padding: 5px;
+  float: left;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.track_container p{
+  display: inline-block;
+  padding: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 75%;
+  text-overflow: ellipsis;
 }
