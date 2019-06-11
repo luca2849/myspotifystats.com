@@ -39,6 +39,7 @@ def set_user_details():
         resp = requests.get(url=endpoint, headers=headers)
         if (resp.status_code == 200):
             res = resp.json()
+            session["firstname"] = res["display_name"].split()[0]
             session["name"] = res["display_name"]
             session["profile_img"] = res["images"][0]["url"]
             return True

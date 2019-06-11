@@ -16,27 +16,28 @@
 
 <body>
 <header>
-        <div class="row top">
-            <a href="{{url_for('home')}}"><img src="{{url_for('static', filename='img/home_img.png')}}" alt="MySpotifyStats Logo" class="logo"></a>
-            <ul class="main_nav">
-                <li><a href="{{url_for('home')}}">Home</a></li>
-                <li><a class="about_button" href="javascript:void(0);">About</a></li>
+    <div class="row top">
+        <a href="{{url_for('home')}}"><img src="{{url_for('static', filename='img/home_img.png')}}" alt="MySpotifyStats Logo" class="logo"></a>
+        <ul class="main_nav">
+            <li><a href="{{url_for('home')}}">Home</a></li>
                 {% if session['access_token'] %}
-                    <li><a href="{{url_for('profile')}}">{{session['name']}}</a></li>
-                    <li><a href="{{url_for('logout')}}">Logout</a></li>
-                {% else %}
-                    <li><a href="{{url_for('login')}}">Login</a></li>
-                {% endif %}
-            </ul>
-        </div>
-  <div class="textbox">
-    <h1>Welcome to <br> myspotifystats.com</h1>
-    <a class="btn btn_full section1" href="javascript:void(0);">What does this site do?</a>
-    <a class="btn btn_ghost section4" href="javascript:void(0);">Where are the available tools?</a>
-  </div>
-  <div class="scroll">
-      <a class="btn_scroll" href="javascript:void(0);"><ion-icon id="chev_down" name="arrow-down"></ion-icon></a>
-  </div>
+            <li><a href="{{url_for('currently_playing')}}">Currently Playing</a></li>
+            <li><a href="{{url_for('profile')}}">{{session['firstname']}}</a></li>
+            <li><a href="{{url_for('logout')}}">Logout</a></li>
+            {% else %}
+            <li><a class="about_button" href="javascript:void(0);">About</a></li>
+            <li><a href="{{url_for('login')}}">Login</a></li>
+            {% endif %}
+        </ul>
+    </div>
+    <div class="textbox">
+        <h1>Welcome to <br> myspotifystats.com</h1>
+        <a class="btn btn_full section1" href="javascript:void(0);">What does this site do?</a>
+        <a class="btn btn_ghost section4" href="javascript:void(0);">Where are the available tools?</a>
+    </div>
+    <div class="scroll">
+        <a class="btn_scroll" href="javascript:void(0);"><ion-icon id="chev_down" name="arrow-down"></ion-icon></a>
+    </div>
 </header>
 <section class="section_info">
     <h2>What can i do?</h2>
