@@ -398,6 +398,7 @@ footer p{
 }
 .track_container img{
   width: 75px;
+  height: 75px;
   padding: 5px;
   float: left;
   border-radius: 50%;
