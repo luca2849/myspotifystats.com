@@ -92,9 +92,13 @@
 
 .main_nav_temp a, .main_nav_temp ul{
   margin-bottom: 2%;
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 }
-
+.main_nav_temp{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 html, body{
   font-family: 'Raleway', 'Arial', sans-serif;
   font-size: 20px;
@@ -247,7 +251,9 @@ section{
     margin-bottom: 80px;
 }
 .non_home{
-  margin-right: 15%;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 /* ================================ */
 /*  CONTACT */
