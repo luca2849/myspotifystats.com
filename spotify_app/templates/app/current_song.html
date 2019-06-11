@@ -1,24 +1,31 @@
 {% extends 'partials/template.html' %}
 {% block title %}{{title}}{% endblock %}
 {% block content %}
-<div id="currently_playing">
-    <img src="{{current['img']}}" alt="">
-    <h2>{{ current["name"] }}</h2>
-    <h3>{{ current["artist"] }}</h3>
-    <h3>{{ current["album"] }} {{ current["release"] }}</h3>
-</div>
-
+<section class="section_currently_playing">
+    <h2>Currently Playing</h2>
+    <div class="row current_song">
+        <div class="col span-1-of-1">
+            <img src="{{current['img']}}" alt="{{ current['album'] }}">
+            <h3>{{ current["name"] }}</h3>
+            <h4>{{ current["artist"] }}</h4>
+            <h5>{{ current["album"] }}</h5>
+        </div>
+    </div>
+</section>
 {% if recent is defined %}
-    <div class="recently_played">
-        <h3>Recently Played</h3>
+<section class="section_recently_played">
+    <h2>Recently Played</h2>
+    <div class="row">
         {% for song in recent %}
-            <div>
-                <img class="recent_album" src="{{ song['track']['album']['images'][0]['url'] }}" alt="">
-                <p><b>{{ song["track"]["name"] }}</b></p>
-                <p>{{ song["track"]["artists"][0]["name"] }}</p>
+            <div class="col 1-of-4 recent">
+                <img src="{{ song['track']['album']['images'][0]['url'] }}" alt="{{ song['track']['name'] }}">
+                <div class="text">
+                    <p><a class="reverse_link" target="_blank" href="{{ song['track']['external_urls']['spotify'] }}">{{ song["track"]["name"] }}</a></p>
+                    <p><a class="reverse_link" target="_blank" href="{{ song['track']['artists'][0]['external_urls']['spotify'] }}">{{ song["track"]["artists"][0]["name"] }}</a></p>
+                </div> 
             </div>
         {% endfor %}
     </div>
+</section>
 {% endif %}
-
 {% endblock %}

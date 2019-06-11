@@ -25,6 +25,10 @@ def profile():
             formatted = formatted.strftime('%d/%m/%Y')
             return render_template("user/profile.html", title="Your Profile", user_details=user_details, user_playlists=user_playlists["items"], med_user_top_tracks=med_user_top_tracks["items"], short_user_top_tracks=short_user_top_tracks["items"], long_user_top_tracks=long_user_top_tracks["items"], birthdate=formatted, short_user_top_artists=short_user_top_artists["items"], med_user_top_artists=med_user_top_artists["items"], long_user_top_artists=long_user_top_artists["items"])
         else:
+            #Save current URL
+            session.pop('url', None)
+            session["url"] = url_for('profile')
+            #Refresh the access token
             return redirect(url_for("token_refresh"))
     else:
         return redirect(url_for("login"))

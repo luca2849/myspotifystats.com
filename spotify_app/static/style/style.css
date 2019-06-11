@@ -4,20 +4,52 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
-
-  #currently_playing{
-    width: 75%;
-    margin: 20px auto 0 auto;
-    text-align: center;
-  }
-  #currently_playing img{
-    max-width:  30%;
-    -webkit-box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
-            box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
-    margin: 15px 0;
-  }
-
-  /* Navbar styling */
+.current_song{
+  margin: 0 auto;
+  text-align: center;
+  word-spacing: 3px;
+  letter-spacing: 2px;
+}
+.current_song div img{
+  max-width: 20%;
+  border: 2px solid #FFF;
+}
+.current_song div h4, .current_song div h5{
+  font-size: 90%;
+}
+.current_song div h3{
+  margin-top: 20px;
+}
+.current_song div h3:after{
+    display: block;
+    height: 2px;
+    background: #1DB954;
+    content: " ";
+    width: 75px;
+    margin: 10px auto 0 auto;
+}
+.section_currently_playing h2, .section_recently_played h2{
+  margin-top: -20px;
+}
+.section_currently_playing{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/festival.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.recent{
+  width: 25%;
+}
+.recent img{
+  width: 100%;
+}
+.recent .text{
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+}
+/* Navbar styling */
  /* ------ LOGO ------ */
 .logo{
     color: #1DB954;
@@ -58,46 +90,10 @@
 .main_nav li a:hover, .main_nav li a:active{
     border-bottom: 2px solid #1DB954;
 }
-  .recently_played{
-    width: 70%;
-    margin: 2% auto 0 auto;
-    text-align: justify;
-  }
-
-  .recently_played div{
-    -webkit-box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
-            box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
-    display: inline-block;
-    width: 15%;
-    height: 20vw;
-  }
-
-  .recently_played > div{
-    width: 15%; /* Declare your value. Can be in relative units. */
-    display: inline-block;
-    vertical-align: top;
-  }
-  .recently_played:after {
-    content: "";
-    width: 100%;
-    display: inline-block;
-  }
-  .recently_played div img{
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .recently_played div p{
-    text-align: center;
-  }
-
-
 .main_nav_temp a, .main_nav_temp ul{
   margin-bottom: 2%;
   letter-spacing: 1px;
 }
-
 html, body{
   font-family: 'Raleway', 'Arial', sans-serif;
   font-size: 20px;
