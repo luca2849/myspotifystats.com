@@ -12,7 +12,8 @@
   }
   #currently_playing img{
     max-width:  30%;
-    box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
     margin: 15px 0;
   }
 
@@ -64,7 +65,8 @@
   }
 
   .recently_played div{
-    box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.2);
     display: inline-block;
     width: 15%;
     height: 20vw;
@@ -104,6 +106,7 @@ html, body{
   overflow-x: hidden;
 }
 header{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url('../img/bg2.png');
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/bg2.png');
   height: 100vh;
   background-size: cover;
@@ -209,6 +212,7 @@ section{
 }
 .section_steps{
   background-color: #F4F4F4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url('../img/dave.png');
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/dave.png');
   background-size: cover;
   background-position: center;
@@ -266,7 +270,8 @@ input[type=text], input[type=email], select, textarea{
     width: 100%;
     padding: 7px;
     border: 1px solid #555;
-    box-shadow: 5px 10px 10px 6px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 5px 10px 10px 6px rgba(0, 0, 0, 0.7);
+            box-shadow: 5px 10px 10px 6px rgba(0, 0, 0, 0.7);
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -305,6 +310,7 @@ input[type=submit]:hover{
   text-decoration: none;
   background: #1DB954;
   outline: none;
+  -webkit-transition: border 0.5s, background-color 0.5s, color 0.5s;
   transition: border 0.5s, background-color 0.5s, color 0.5s;
 }
 .btn_full:hover, .btn_full:active{
@@ -366,6 +372,7 @@ footer p{
 }
 /* Profile */
 .section_user_details{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url('../img/katy_perry.png');
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/katy_perry.png');
   background-size: cover;
   background-position: center;
@@ -413,6 +420,7 @@ footer p{
   text-overflow: ellipsis;
 }
 .section_top_artists{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url('../img/jeff.png');
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/jeff.png');
   background-size: cover;
   background-position: center;
