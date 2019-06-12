@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/ico" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,300italic" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/normalize.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@4.5.9-1/dist/ionicons/ionicons.esm.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/media.css') }}">
+
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -51,17 +54,17 @@
         <p>Luca Passariello 2019 <span id="footer_spacer">|</span><a class="in_text_link" target="_blank"
                 href="http://www.lucapassariello.co.uk">Portfolio</a></p>
     </footer>
-    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
     $('.menu_btn').click(function () {
+        document.querySelector('.menu').style.transition = "all 0.5s";
         document.querySelector('.menu').style.display = "block";
         document.querySelector('.menu').style.width = "50vw";
         document.querySelector('.menu_btn').style.display = "none";
     })
     $('.menu_close_btn').click(function () {
-        document.querySelector('.menu').style.display = "none";
+        document.querySelector('.menu').style.transition = "all 0.5s";
         document.querySelector('.menu').style.width = "0";
+        document.querySelector('.menu').style.display = "none";
         document.querySelector('.menu_btn').style.display = "block";
     })
     </script>
