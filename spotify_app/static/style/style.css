@@ -61,7 +61,7 @@
     width: auto;
     float: left;
     line-height: 60px;
-    margin-top: 50px;
+    margin: 50px 0 0 20px;
 }
 /* ------ Navigation Links ------ */
 .top{
@@ -227,32 +227,23 @@ section{
     padding-left: 3%;
     margin-top: 60px;
 }
-.works_step{
-  width: 35%;
-  margin: 0 auto 50px auto;
-}
 .one_step{
   line-height: 50px;
-}
-.works_step div{
-    color: #1DB954;
-    border-radius: 50%;
-    border: 2px solid #1DB954;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    font-size: 115%;
-    padding: 5px;
-    float: left;
-    margin-right: 15px;
-}
-.works_step:last-of-type{
-    margin-bottom: 80px;
 }
 .non_home{
   position: absolute;
   top: 0;
   right: 0;
+}
+.cen{
+    text-align: center;
+}
+label{
+   margin: 10px 0;
+   text-align: center;
+}
+#num{
+  color: #1DB954;
 }
 /* ================================ */
 /*  CONTACT */
@@ -260,13 +251,18 @@ section{
 .section_contact{
   background: #232121;
 }
-.cont_title{}
 .contact_form{
     width: 60%;
     margin: 0 auto;
 }
+.contact_form .row div{
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
 input[type=text], input[type=email], select, textarea{
-    width: 100%;
+  margin: 0 auto;
+    width: 50%;
     padding: 7px;
     border: 1px solid #555;
     -webkit-box-shadow: 5px 10px 10px 6px rgba(0, 0, 0, 0.7);

@@ -47,12 +47,13 @@
     .btn{
         margin-bottom: 20px; 
     }
-
+    .contact_form{
+        width: 150%;
+    }
 }
 /* iPhone 5 and earlier (small phones) 0px to 480px */
 @media only screen and (max-width: 480px){
     section{ padding: 25px 0; }
-    .contact_form{ width: 100%; }
     body{
         font-size: 12px;
     }

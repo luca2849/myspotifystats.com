@@ -81,7 +81,7 @@
     </div> -->
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-6 col-md-3 col-lg-3" >
+            <div class="cen col-12 col-sm-6 col-md-3 col-lg-3" >
                 <ion-icon name="headset" class="icon"></ion-icon>
                 <h3>See what's playing</h3>
                 <p>
@@ -89,7 +89,7 @@
                         currently playing</a> app, you can see what is playing and what has played recently.
                 </p>
             </div>
-            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="cen col-12 col-sm-6 col-md-3 col-lg-3">
                 <ion-icon name="trending-up" class="icon"></ion-icon>
                 <h3>Top tracks and artists</h3>
                 <p>
@@ -97,7 +97,7 @@
                     from varying timescales.
                 </p>
             </div>
-            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="cen col-12 col-sm-6 col-md-3 col-lg-3">
                 <ion-icon name="call" class="icon"></ion-icon>
                 <h3>Contact Us</h3>
                 <p>
@@ -105,7 +105,7 @@
                         class="contact_btn in_text_link">contact form</a> to notify the development team.
                 </p>
             </div>
-            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+            <div class="cen col-12 col-sm-6 col-md-3 col-lg-3">
                 <ion-icon name="hammer" class="icon"></ion-icon>
                 <h3>More Coming Soon</h3>
                 <p>
@@ -117,42 +117,43 @@
 </section>
 <section class="section_steps">
     <h2>How does it work?</h2>
-    <div class="row">
-        <div class="works_step">
-            <div>1</div>
-            <p><a class="in_text_link" href="{{url_for('login')}}">Login</a> to the website with spotify. We don't store any of your data</p>
-        </div>
-        <div class="works_step">
-            <div>2</div>
-            <p>When you are signed in, you are given a token which is attached to your account</p>
-        </div>
-        <div class="works_step">
-            <div>3</div>
-        <p>This token lasts an hour and is used to get data from spotify for your account</p>
-        </div>
-        <div class="works_step">
-            <div>4</div>
-            <p>This data is then formatted and displayed to you!</p>
+    <div class="container">
+        <div class="row">
+            <div class="works_step col-12 col-sm-6 col-md-3 col-lg-3">
+                <p><span id="num">1 &mdash;</span> <a class="in_text_link" href="{{url_for('login')}}">Login</a> to the website with spotify. We don't store any
+                    of your data</p>
+            </div>
+            <div class="works_step col-12 col-sm-6 col-md-3 col-lg-3">
+                <p><span id="num">2 &mdash;</span> When you are signed in, you are given a token which is attached to your account</p>
+            </div>
+            <div class="works_step col-12 col-sm-6 col-md-3 col-lg-3">
+                <p><span id="num">3 &mdash;</span> This token lasts an hour and is used to get data from spotify for your account</p>
+            </div>
+            <div class="works_step col-12 col-sm-6 col-md-3 col-lg-3">
+                <p><span id="num">4 &mdash;</span> This data is then formatted and displayed to you!</p>
+            </div>
         </div>
     </div>
 </section>
 <section class="section_tools">
     <h2>Where are the available tools?</h2>
-    <div class="row">
-        <div class="col span1-of-3 box">
-            <ion-icon name="headset" class="icon"></ion-icon>
-            <h3>Currently Playing</h3>
-            <a class="btn btn_full" href="{{ url_for('currently_playing') }}">Here!</a>
-        </div>
-        <div class="col span1-of-3 box">
-            <ion-icon name="trending-up" class="icon"></ion-icon>
-            <h3>Top tracks and artists</h3>
-            <a class="btn btn_full" href="{{ url_for('profile') }}">Here!</a>
-        </div>
-        <div class="col span1-of-3 box">
-            <ion-icon name="call" class="icon"></ion-icon>
-            <h3 class="cont_title">Contact</h3>
-            <a class="btn btn_full contact_btn" href="javascript:void(0);">Here!</a>
+    <div class="container">
+        <div class="row">
+            <div class="cen col-12 col-sm-4">
+                <ion-icon name="headset" class="icon"></ion-icon>
+                <h3>Currently Playing</h3>
+                <a class="btn btn_full" href="{{ url_for('currently_playing') }}">Here!</a>
+            </div>
+            <div class="cen col-12 col-sm-4">
+                <ion-icon name="trending-up" class="icon"></ion-icon>
+                <h3>Top tracks and artists</h3>
+                <a class="btn btn_full" href="{{ url_for('profile') }}">Here!</a>
+            </div>
+            <div class="cen col-12 col-sm-4">
+                <ion-icon name="call" class="icon"></ion-icon>
+                <h3 class="cont_title">Contact</h3>
+                <a class="btn btn_full contact_btn" href="javascript:void(0);">Here!</a>
+            </div>
         </div>
     </div>
 </section>
@@ -164,26 +165,26 @@
         <div class="row">
             <form action="#" method="POST" class="contact_form">
                 <div class="row">
-                    <div class="col span-1-of-3">
+                    <div class="col-12 col-sm-12">
                         <label for="name">Name</label>
                     </div>
-                    <div class="col span-2-of-3">
+                    <div class="col-12 col-sm-12">
                         <input type="text" name="name" id="name" placeholder="Your name..." required="required" />
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col span-1-of-3">
+                    <div class="col-12 col-sm-12">
                         <label for="email">Email</label>
                     </div>
-                    <div class="col span-2-of-3">
+                    <div class="col-12 col-sm-12">
                         <input type="email" name="email" id="email" placeholder="Your email..." required="required" />
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col span-1-of-3">
+                    <div class="col-12 col-sm-12">
                         <label for="find_us">How did you find us?</label>
                     </div>
-                    <div class="col span-2-of-3">
+                    <div class="col-12 col-sm-12">
                         <select name="find_us" id="find_us">
                             <option value="placeholder" disabled="disabled" selected="selected">Select One</option>
                             <option value="friends">Friends</option>
@@ -194,18 +195,18 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col span-1-of-3">
+                    <div class="col-12 col-sm-12">
                         <label for="news">Your message</label>
                     </div>
-                    <div class="col span-2-of-3">
+                    <div class="col-12 col-sm-12">
                         <textarea name="news" id="news" cols="30" rows="10"></textarea>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col span-1-of-3">
+                    <div class="col-12 col-sm-12">
                         <label>&nbsp;</label>
                     </div>
-                    <div class="col span-2-of-3">
+                    <div class="col-12 col-sm-12">
                         <input class="btn btn_ghost" type="submit" value="Submit">
                     </div>
                 </div>
