@@ -260,6 +260,9 @@ label{
     text-align: center;
     margin: 0 auto;
 }
+.contact_btn{
+  text-align: center;
+}
 input[type=text], input[type=email], select, textarea{
   margin: 0 auto;
     width: 50%;

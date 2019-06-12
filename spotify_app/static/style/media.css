@@ -38,7 +38,8 @@
         margin-left: 0%;
     }
     h1{ font-size: 180%; }
-    h2{ font-size: 150%; }
+    h2{ font-size: 140%; }
+    h2:after{ width: 100px; }
     .cont_title:after{
         display: block;
         height: 20px;
@@ -49,6 +50,9 @@
     }
     .contact_form{
         width: 150%;
+    }
+    .logo{
+        margin: 0px 0px 0px 10px;
     }
 }
 /* iPhone 5 and earlier (small phones) 0px to 480px */
