@@ -470,6 +470,9 @@ footer p{
 .section_more_info{
   background: #232121;
 }
+.btn_drop{
+  cursor: pointer;
+}
 .btn_drop_cont{
   width: 100%;
   padding: 20px;
