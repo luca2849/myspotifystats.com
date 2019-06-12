@@ -26,6 +26,23 @@
             {% endif %}
         </ul>
     </div>
+    <div class="menu_btn">
+        <a href="javascript:void(0);">
+            <ion-icon name="menu"></ion-icon>
+        </a>
+    </div>
+    <div class="menu">
+        <a class="menu_close_btn" href="javascript:void(0)">
+            <ion-icon name="close" class="icon"></ion-icon>
+        </a>
+        {% if session['access_token'] %}
+        <a href="{{url_for('currently_playing')}}">Currently Playing</a>
+        <a href="{{url_for('profile')}}">{{session['firstname']}}</a>
+        <a href="{{url_for('logout')}}">Logout</a>
+        {% else %}
+        <a href="{{url_for('login')}}">Login</a>
+        {% endif %}
+    </div>
     {% block content %}
 
     {% endblock %}
@@ -36,5 +53,17 @@
     </footer>
     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+    $('.menu_btn').click(function () {
+        document.querySelector('.menu').style.display = "block";
+        document.querySelector('.menu').style.width = "50vw";
+        document.querySelector('.menu_btn').style.display = "none";
+    })
+    $('.menu_close_btn').click(function () {
+        document.querySelector('.menu').style.display = "none";
+        document.querySelector('.menu').style.width = "0";
+        document.querySelector('.menu_btn').style.display = "block";
+    })
+    </script>
 </body>
 </html>
