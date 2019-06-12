@@ -420,8 +420,12 @@ footer p{
   background-attachment: fixed;
 }
 #user_img{
-  float:left;
-  margin-right: 30px;
+  float:none;
+  margin: 0 30px 20px 0;
+}
+.user{
+  margin: 0 auto;
+  text-align: center;
 }
 #user_img img{
   border-radius: 50%;
@@ -432,10 +436,6 @@ footer p{
 }
 .user_info{
   list-style-type: none;
-}
-.row_content{
-  width: 800px;
-  margin: 0 auto;
 }
 .track_container{
   overflow-wrap: break-word;
@@ -469,4 +469,40 @@ footer p{
 }
 .section_more_info{
   background: #232121;
+}
+.btn_drop_cont{
+  width: 100%;
+  padding: 20px;
+  text-decoration: none;
+  background: #232121;
+}
+.btn_drop_cont a, .btn_drop_cont a span{
+  display: block;
+  color: white;
+}
+.btn_drop_cont a:hover{
+  text-decoration: none;
+}
+.btn_drop span {
+  float: right;
+  padding: 0;
+  font-size: 150%;
+}
+.collapsed{
+  text-align: center;
+}
+.collapsed a img{
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
+.mobile_tracks{
+  text-align: center;
+  margin-top: 20px;
+}
+.artist{
+  background: #191414;
+}
+.mobile_tracks{
+  display: none;
 }

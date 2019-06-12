@@ -4,98 +4,209 @@
 
 <section class="section_user_details">
     <h2>User Information</h2>
-    <div class="row">
-        <div class="row_content">
-            <div id="user_img">
-                <img src="{{ user_details.images[0].url }}" alt="">
-            </div>
-            <ul class="user_info">
-                <li>Name - {{ user_details.display_name }}</li>
-                <li>Email - {{ user_details.email }}</li>
-                <li>Date of Birth - {{ birthdate}}</li>
-                <li>Follower Count - {{ user_details.followers.total }}</li>
-                <li>Account Type - {{ user_details.product[0]|upper}}{{user_details.product[1:]}}</li>
-                <li>Spotify Profile - <a class="in_text_link" target="_blank"
-                            href="{{ user_details.external_urls.spotify }}">{{ user_details.external_urls.spotify }}</a></li>
-            </ul>
+    <div class="user">
+        <div id="user_img">
+            <img src="{{ user_details.images[0].url }}" alt="">
         </div>
+        <ul class="user_info">
+            <li>Name - {{ user_details.display_name }}</li>
+            <li>Email - {{ user_details.email }}</li>
+            <li>Date of Birth - {{ birthdate}}</li>
+            <li>Followers - {{ user_details.followers.total }}</li>
+            <li>Account Type - {{ user_details.product[0]|upper}}{{user_details.product[1:]}}</li>
+            <li>Spotify Profile - <a class="in_text_link" target="_blank"
+                    href="{{ user_details.external_urls.spotify }}">{{ user_details.external_urls.spotify }}</a></li>
+        </ul>
     </div>
+
 </section>
 <section class="section_top_tracks">
     <h2>Top Tracks</h2>
-    <div class="row">
-        <div class="col span-1-of-3 track">
-            <h3>Last 4 Weeks</h3>
-            {% for track in short_user_top_tracks %}
-            <div class="track_container">
-                <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
-                    <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
-                    <p>{{ track.name }}</p>
-                </a>
+    <div class="container non_mobile_tracks">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Last 4 Weeks</h3>
+                {% for track in short_user_top_tracks %}
+                    <div class="track_container">
+                    <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
+                        <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
+                        <p>{{ track.name }}</p>
+                    </a>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-        <div class="col span-1-of-3 track">
-            <h3>Last 6 Months</h3>
-            {% for track in med_user_top_tracks %}
-            <div class="track_container">
-                <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
-                    <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
-                    <p>{{ track.name }}</p>
-                </a>
+            <div class="col-md-4">
+                <h3>Last 6 Months</h3>
+                {% for track in med_user_top_tracks %}
+                    <div class="track_container">
+                    <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
+                        <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
+                        <p>{{ track.name }}</p>
+                    </a>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-        <div class="col span-1-of-3 track">
-            <h3>All Data</h3>
-            {% for track in long_user_top_tracks %}
-            <div class="track_container">
-                <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
-                    <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
-                    <p>{{ track.name }}</p>
-                </a>
+            <div class="col-md-4">
+                <h3>All Data</h3>
+                {% for track in long_user_top_tracks %}
+                    <div class="track_container">
+                    <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
+                        <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
+                        <p>{{ track.name }}</p>
+                    </a>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
+<div class="container mobile_tracks">
+    <div class="btn_drop_cont">
+        <a class="btn_drop" data-toggle="collapse" data-target="#tracks_4_weeks">
+            <p>Last 4 Weeks <span><ion-icon name="arrow-down"></ion-icon></span></p>
+        </a>
+    </div>
+    <div id="tracks_4_weeks" class="collapse">
+        {% for track in short_user_top_tracks %}
+        <div class="track_container collapsed">
+            <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
+                <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
+                <p>{{ track.name }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="container mobile_tracks">
+    <div class="btn_drop_cont">
+        <a class="btn_drop" data-toggle="collapse" data-target="#tracks_6_months">
+            <p>Last 6 Months <span><ion-icon name="arrow-down"></ion-icon></span></p>
+        </a>
+    </div>
+    <div id="tracks_6_months" class="collapse">
+        {% for track in med_user_top_tracks %}
+        <div class="track_container collapsed">
+            <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
+                <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
+                <p>{{ track.name }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="container mobile_tracks">
+    <div class="btn_drop_cont">
+        <a class="btn_drop" data-toggle="collapse" data-target="#tracks_all_data">
+            <p>All Data <span><ion-icon name="arrow-down"></ion-icon></span></p>
+        </a>
+    </div>
+    <div id="tracks_all_data" class="collapse">
+        {% for track in long_user_top_tracks %}
+        <div class="track_container collapsed">
+            <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
+                <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
+                <p>{{ track.name }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 </section>
 <section class="section_top_artists">
     <h2>Top Artists</h2>
-    <div class="row">
-        <div class="col span-1-of-3 track">
-            <h3>Last 4 Weeks</h3>
-            {% for artist in short_user_top_artists %}
-            <div class="track_container">
-                <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
-                    <img id="track_img" src="{{ artist.images[0].url }}" alt="">
-                    <p>{{ artist.name }}</p>
-                </a>
+    <div class="container non_mobile_tracks">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Last 4 Weeks</h3>
+                {% for artist in short_user_top_artists %}
+                <div class="track_container">
+                    <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
+                        <img id="track_img" src="{{ artist.images[0].url }}" alt="">
+                        <p>{{ artist.name }}</p>
+                    </a>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-        <div class="col span-1-of-3 track">
-            <h3>Last 6 months</h3>
-            {% for artist in med_user_top_artists %}
-            <div class="track_container">
-                <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
-                    <img id="track_img" src="{{ artist.images[0].url }}" alt="">
-                    <p>{{ artist.name }}</p>
-                </a>
+            <div class="col-md-4">
+                <h3>Last 6 Months</h3>
+                {% for artist in med_user_top_artists %}
+                <div class="track_container">
+                    <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
+                        <img id="track_img" src="{{ artist.images[0].url }}" alt="">
+                        <p>{{ artist.name }}</p>
+                    </a>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
-        <div class="col span-1-of-3 track">
-            <h3>All Data</h3>
-            {% for artist in long_user_top_artists %}
-            <div class="track_container">
-                <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
-                    <img id="track_img" src="{{ artist.images[0].url }}" alt="">
-                    <p>{{ artist.name }}</p>
-                </a>
+            <div class="col-md-4">
+                <h3>All Data</h3>
+                {% for artist in long_user_top_artists %}
+                <div class="track_container">
+                    <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
+                        <img id="track_img" src="{{ artist.images[0].url }}" alt="">
+                        <p>{{ artist.name }}</p>
+                    </a>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
+<div class="container mobile_tracks">
+    <div class="btn_drop_cont">
+        <a class="btn_drop" data-toggle="collapse" data-target="#artists_4_weeks">
+            <p>Last 4 Weeks <span>
+                    <ion-icon name="arrow-down"></ion-icon>
+                </span></p>
+        </a>
+    </div>
+    <div id="artists_4_weeks" class="collapse artist">
+        {% for artist in short_user_top_artists %}
+        <div class="track_container collapsed">
+            <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
+                <img id="track_img" src="{{ artist.images[0].url }}" alt="">
+                <p>{{ artist.name }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="container mobile_tracks">
+    <div class="btn_drop_cont">
+        <a class="btn_drop" data-toggle="collapse" data-target="#artists_6_months">
+            <p>Last 6 Months <span>
+                    <ion-icon name="arrow-down"></ion-icon>
+                </span></p>
+        </a>
+    </div>
+    <div id="artists_6_months" class="collapse artist">
+        {% for artist in med_user_top_artists %}
+        <div class="track_container collapsed">
+            <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
+                <img id="track_img" src="{{ artist.images[0].url }}" alt="">
+                <p>{{ artist.name }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="container mobile_tracks">
+    <div class="btn_drop_cont">
+        <a class="btn_drop" data-toggle="collapse" data-target="#artists_all_data">
+            <p>All Data <span>
+                    <ion-icon name="arrow-down"></ion-icon>
+                </span></p>
+        </a>
+    </div>
+    <div id="artists_all_data" class="collapse artist">
+        {% for artist in long_user_top_artists %}
+        <div class="track_container collapsed">
+            <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
+                <img id="track_img" src="{{ artist.images[0].url }}" alt="">
+                <p>{{ artist.name }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 </section>
 <!-- <section class="section_more_info">
     <h2>More Information</h2>
