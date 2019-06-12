@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/normalize.css') }}">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/grid.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/media.css') }}">
 
@@ -42,7 +41,7 @@
 </header>
 <section class="section_info">
     <h2>What can i do?</h2>
-    <div class="row">
+    <!-- <div class="row">
         <p class="short_copy">
             MySpotifyStats.com is an app for viewing more information about your Spotify account.<br /> We do not store or process any of your data.
             <br />To use the app properly, you should login with Spotify <a class="in_text_link" href="{{url_for('login')}}">here</a>.
@@ -77,6 +76,42 @@
             <p>
                 More content will be coming in future updates, such as playlist analysis.
             </p>
+        </div>
+        // 576 - 767 //
+    </div> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3" >
+                <ion-icon name="headset" class="icon"></ion-icon>
+                <h3>See what's playing</h3>
+                <p>
+                    By using the <a class="in_text_link" href="{{url_for('currently_playing')}}">
+                        currently playing</a> app, you can see what is playing and what has played recently.
+                </p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                <ion-icon name="trending-up" class="icon"></ion-icon>
+                <h3>Top tracks and artists</h3>
+                <p>
+                    From your <a href="{{url_for('profile')}}" class="in_text_link">profile</a>, you can see your top artists and tracks
+                    from varying timescales.
+                </p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                <ion-icon name="call" class="icon"></ion-icon>
+                <h3>Contact Us</h3>
+                <p>
+                    If there are any issues, improvements or suggestions please using the <a href="javascript:void(0);"
+                        class="contact_btn in_text_link">contact form</a> to notify the development team.
+                </p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                <ion-icon name="hammer" class="icon"></ion-icon>
+                <h3>More Coming Soon</h3>
+                <p>
+                    More content will be coming in future updates, such as playlist analysis.
+                </p>
+            </div>
         </div>
     </div>
 </section>
@@ -184,6 +219,9 @@
 <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 <script>
     $('.contact_btn').click(function(){
         $('html, body').animate({
