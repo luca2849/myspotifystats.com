@@ -36,6 +36,36 @@
     .btn_scroll{
         display: none;
     }
+    .menu_btn{
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 300%;
+        margin: 0px 10px;
+    }
+    .menu_btn a:link, .menu_btn a:visited{
+        color: #FFF;
+        transition: color 0.5s;
+        -webkit-transition: color 0.5s;
+        -moz-transition: color 0.5s;
+        -ms-transition: color 0.5s;
+        -o-transition: color 0.5s;
+    }
+    .menu_btn a:hover, .menu_btn a:active{
+        color: #1DB954;
+    }
+    .menu_nav{
+        background: #191414;
+        padding: 20px;
+        height: 100vh;
+        margin: 0;
+    }
+    .menu_nav a{
+        text-decoration: none;
+        display: block;
+        margin: 20px;
+    }
     .long_copy{ 
         width: 100%;
         margin-left: 0%;
@@ -61,27 +91,16 @@
 /* iPhone 5 and earlier (small phones) 0px to 480px */
 @media only screen and (max-width: 480px){
     section{ padding: 25px 0; }
-    body{
-        font-size: 12px;
-    }
-    .logo{
-        height: 30px;
-    }
-    h1{
-        font-size: 150%;
-    }
-    .btn{
-        font-size: 80%;
-    }
-    .current_song div img{
-        max-width: 40vw;
-    }
+    body{ font-size: 12px; }
+    .logo{ height: 30px; }
+    h1{ font-size: 150%; }
+    h2{ margin-top: 20px; }
+    .btn{ font-size: 80%; }
+    .current_song div img{ max-width: 40vw; }
     .recent img{
         width: 35vw;
         display: block;
         margin: 0 auto;
     }
-    .recent{
-        padding-top: 30px;
-    }
+    .recent{ margin-top: 30px; }
 }
