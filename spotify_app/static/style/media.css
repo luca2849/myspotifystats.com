@@ -4,9 +4,6 @@
         width: 100%;
         padding: 0 2%;
     }
-    .row{
-        padding: 0 2%;
-    }
 }
 /* Tablets (768px to 1023px) */
 @media only screen and (max-width: 1000px){
@@ -25,17 +22,12 @@
         font-size: 16px; 
         overflow-x: hidden;
     }
-        section{ 
+    section{ 
         padding: 30px 0;
         background-attachment: scroll!important;
     }
     header{
         background-attachment: scroll;
-    }
-    .row, .textbox{ padding: 0 5%; }
-    .col {
-        width: 100vw;
-        margin: 0 0 4% 0%;
     }
     .main_nav{ display: none; }
     .btn_scroll{
@@ -66,9 +58,6 @@
     }
     .logo{
         height: 30px;
-    }
-    .col{
-        width: 150%;
     }
     h1{
         font-size: 150%;

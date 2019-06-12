@@ -155,10 +155,6 @@ h2:after{
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
 }
-.row{
-    max-width: 1350px;
-    margin: 0 auto;
-}
 section{
     padding: 80px 0;
 }
