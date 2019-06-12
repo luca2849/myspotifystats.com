@@ -419,14 +419,15 @@ footer p{
   background-position: center;
   background-attachment: fixed;
 }
-#user_img{
-  float:none;
-  margin: 0 30px 20px 0;
+#user_img img{
+  width: 10vw;
+  margin: 10px auto;
 }
 .user{
   margin: 0 auto;
   text-align: center;
 }
+
 #user_img img{
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -438,6 +439,7 @@ footer p{
   list-style-type: none;
 }
 .track_container{
+  padding: 10px;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -454,7 +456,7 @@ footer p{
 }
 .track_container p{
   display: inline-block;
-  padding: 20px;
+  padding: 10px;
   white-space: nowrap;
   overflow: hidden;
   max-width: 75%;
@@ -478,6 +480,9 @@ footer p{
   padding: 20px;
   text-decoration: none;
   background: #232121;
+}
+.btn_drop_cont p{
+  margin: 0;
 }
 .btn_drop_cont a, .btn_drop_cont a span{
   display: block;
