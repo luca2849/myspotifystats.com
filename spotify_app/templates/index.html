@@ -33,7 +33,7 @@
             <a href="javascript:void(0);"><ion-icon name="menu"></ion-icon></a>
         </div>
         <div class="menu">
-            <a class="menu_close_btn" href="javascript:void(0)"><ion-icon name="close"></ion-icon></a>
+            <a class="menu_close_btn" href="javascript:void(0)"><ion-icon name="close" class="icon"></ion-icon></a>
             {% if session['access_token'] %}
                 <a href="{{url_for('currently_playing')}}">Currently Playing</a>
                 <a href="{{url_for('profile')}}">{{session['firstname']}}</a>

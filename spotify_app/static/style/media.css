@@ -55,17 +55,6 @@
     .menu_btn a:hover, .menu_btn a:active{
         color: #1DB954;
     }
-    .menu_nav{
-        background: #191414;
-        padding: 20px;
-        height: 100vh;
-        margin: 0;
-    }
-    .menu_nav a{
-        text-decoration: none;
-        display: block;
-        margin: 20px;
-    }
     .long_copy{ 
         width: 100%;
         margin-left: 0%;
