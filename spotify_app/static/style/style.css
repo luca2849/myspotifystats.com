@@ -620,3 +620,28 @@ footer p {
 .mobile_tracks {
     display: none
 }
+
+/* Mobile Tracks Container */
+.mob_track_container{
+    width: 100%;
+    padding: 10px;
+    background: #232121;
+}
+.mob_track_container a .mob_track_img{
+    max-width: 75px;
+    float: left;
+    margin: auto ;
+    border-radius: 50%;;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.mob_track_container a p{
+    line-height: 75px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 65%;
+    text-overflow: ellipsis;
+    margin: 5px auto;
+}

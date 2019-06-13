@@ -67,9 +67,15 @@
     </div>
     <div id="tracks_4_weeks" class="collapse">
         {% for track in short_user_top_tracks %}
-        <div class="track_container collapsed">
+        <!-- <div class="track_container collapsed">
             <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
                 <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
+                <p>{{ track.name }}</p>
+            </a>
+        </div> -->
+        <div class="mob_track_container">
+            <a href="{{ track.external_urls.spotify }}" class="reverse_link">
+                <img class="mob_track_img" src="{{ track.album.images[0].url }}" alt="">
                 <p>{{ track.name }}</p>
             </a>
         </div>
@@ -84,9 +90,15 @@
     </div>
     <div id="tracks_6_months" class="collapse">
         {% for track in med_user_top_tracks %}
-        <div class="track_container collapsed">
+        <!-- <div class="track_container collapsed">
             <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
                 <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
+                <p>{{ track.name }}</p>
+            </a>
+        </div> -->
+        <div class="mob_track_container">
+            <a href="{{ track.external_urls.spotify }}" class="reverse_link">
+                <img class="mob_track_img" src="{{ track.album.images[0].url }}" alt="">
                 <p>{{ track.name }}</p>
             </a>
         </div>
@@ -101,9 +113,15 @@
     </div>
     <div id="tracks_all_data" class="collapse">
         {% for track in long_user_top_tracks %}
-        <div class="track_container collapsed">
+        <!-- <div class="track_container collapsed">
             <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
                 <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
+                <p>{{ track.name }}</p>
+            </a>
+        </div> -->
+        <div class="mob_track_container">
+            <a href="{{ track.external_urls.spotify }}" class="reverse_link">
+                <img class="mob_track_img" src="{{ track.album.images[0].url }}" alt="">
                 <p>{{ track.name }}</p>
             </a>
         </div>
@@ -160,9 +178,15 @@
     </div>
     <div id="artists_4_weeks" class="collapse artist">
         {% for artist in short_user_top_artists %}
-        <div class="track_container collapsed">
+        <!-- <div class="track_container collapsed">
             <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
                 <img id="track_img" src="{{ artist.images[0].url }}" alt="">
+                <p>{{ artist.name }}</p>
+            </a>
+        </div> -->
+        <div class="mob_track_container">
+            <a href="{{ artist.external_urls.spotify }}" class="reverse_link">
+                <img class="mob_track_img" src="{{ artist.images[0].url }}" alt="">
                 <p>{{ artist.name }}</p>
             </a>
         </div>
@@ -179,9 +203,15 @@
     </div>
     <div id="artists_6_months" class="collapse artist">
         {% for artist in med_user_top_artists %}
-        <div class="track_container collapsed">
+        <!-- <div class="track_container collapsed">
             <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
                 <img id="track_img" src="{{ artist.images[0].url }}" alt="">
+                <p>{{ artist.name }}</p>
+            </a>
+        </div> -->
+        <div class="mob_track_container">
+            <a href="{{ artist.external_urls.spotify }}" class="reverse_link">
+                <img class="mob_track_img" src="{{ artist.images[0].url }}" alt="">
                 <p>{{ artist.name }}</p>
             </a>
         </div>
@@ -198,9 +228,15 @@
     </div>
     <div id="artists_all_data" class="collapse artist">
         {% for artist in long_user_top_artists %}
-        <div class="track_container collapsed">
+        <!-- <div class="track_container collapsed">
             <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
                 <img id="track_img" src="{{ artist.images[0].url }}" alt="">
+                <p>{{ artist.name }}</p>
+            </a>
+        </div> -->
+        <div class="mob_track_container">
+            <a href="{{ artist.external_urls.spotify }}" class="reverse_link">
+                <img class="mob_track_img" src="{{ artist.images[0].url }}" alt="">
                 <p>{{ artist.name }}</p>
             </a>
         </div>
