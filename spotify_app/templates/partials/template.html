@@ -50,11 +50,11 @@
             <ion-icon name="close" class="icon"></ion-icon>
         </a>
         {% if session['access_token'] %}
-        <a href="{{url_for('currently_playing')}}">Currently Playing</a>
-        <a href="{{url_for('profile')}}">{{session['firstname']}}</a>
-        <a href="{{url_for('logout')}}">Logout</a>
+        <a class="side_nav_item" href="{{url_for('currently_playing')}}">Currently Playing</a>
+        <a class="side_nav_item" href="{{url_for('profile')}}">{{session['firstname']}}</a>
+        <a class="side_nav_item" href="{{url_for('logout')}}">Logout</a>
         {% else %}
-        <a href="{{url_for('login')}}">Login</a>
+        <a class="side_nav_item" href="{{url_for('login')}}">Login</a>
         {% endif %}
     </div>
     {% block content %}
@@ -69,7 +69,7 @@
     $('.menu_btn').click(function () {
         document.querySelector('.menu').style.transition = "all 0.5s";
         document.querySelector('.menu').style.display = "block";
-        document.querySelector('.menu').style.width = "50vw";
+        document.querySelector('.menu').style.width = "75vw";
         document.querySelector('.menu_btn').style.display = "none";
     })
     $('.menu_close_btn').click(function () {
