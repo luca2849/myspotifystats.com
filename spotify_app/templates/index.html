@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/ico" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,300italic" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/normalize.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/media.css') }}">
 
     <title>MySpotifyStats | Home</title>
+    <meta name="Description"
+        content="With MySpotifyStats you can check your favorite artists, songs, view what's playing and much more.">
+    <meta name="Keywords" content="Spotify Stats Music Statistics">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 
 <body>
@@ -96,17 +98,17 @@
     <div class="container">
         <div class="row">
             <div class="works_step col-12 col-sm-6 col-md-3 col-lg-3">
-                <p><span id="num">1 &mdash;</span> <a class="in_text_link" href="{{url_for('login')}}">Login</a> to the website with spotify. We don't store any
+                <p><span class="num">1 &mdash;</span> <a class="in_text_link" href="{{url_for('login')}}">Login</a> to the website with spotify. We don't store any
                     of your data</p>
             </div>
             <div class="works_step col-12 col-sm-6 col-md-3 col-lg-3">
-                <p><span id="num">2 &mdash;</span> When you are signed in, you are given a token which is attached to your account</p>
+                <p><span class="num">2 &mdash;</span> When you are signed in, you are given a token which is attached to your account</p>
             </div>
             <div class="works_step col-12 col-sm-6 col-md-3 col-lg-3">
-                <p><span id="num">3 &mdash;</span> This token lasts an hour and is used to get data from spotify for your account</p>
+                <p><span class="num">3 &mdash;</span> This token lasts an hour and is used to get data from spotify for your account</p>
             </div>
             <div class="works_step col-12 col-sm-6 col-md-3 col-lg-3">
-                <p><span id="num">4 &mdash;</span> This data is then formatted and displayed to you!</p>
+                <p><span class="num">4 &mdash;</span> This data is then formatted and displayed to you!</p>
             </div>
         </div>
     </div>

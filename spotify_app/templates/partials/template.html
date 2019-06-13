@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/ico" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,300italic" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='vendor/style/bootstrap.css') }}">
@@ -14,6 +11,12 @@
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/media.css') }}">
 
     <title>{% block title %}{% endblock %}</title>
+    <meta name="Description"
+        content="With MySpotifyStats you can check your favorite artists, songs, view what's playing and much more.">
+    <meta name="Keywords" content="Spotify Stats Music Statistics">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
     <div class="row top">
