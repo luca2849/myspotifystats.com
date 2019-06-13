@@ -32,7 +32,7 @@
   margin-top: -20px;
 }
 .section_currently_playing{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/festival.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/festival.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -151,8 +151,8 @@ html, body{
   overflow-x: hidden;
 }
 header{
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url('../img/bg2.png');
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/bg2.png');
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url('../img/bg2.webp');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/bg2.webp');
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -253,8 +253,8 @@ section{
 }
 .section_steps{
   background-color: #F4F4F4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url('../img/dave.png');
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/dave.png');
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url('../img/dave.webp');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/dave.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -413,8 +413,8 @@ footer p{
 }
 /* Profile */
 .section_user_details{
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url('../img/katy_perry.png');
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/katy_perry.png');
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url('../img/katy_perry.webp');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/katy_perry.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -463,8 +463,8 @@ footer p{
   text-overflow: ellipsis;
 }
 .section_top_artists{
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url('../img/jeff.png');
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/jeff.png');
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url('../img/jeff.webp');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/jeff.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -497,6 +497,7 @@ footer p{
   font-size: 150%;
 }
 .collapsed{
+  background: #232121;
   text-align: center;
 }
 .collapsed a img{
