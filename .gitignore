@@ -1,3 +1,6 @@
+# API Keys
+spotify_app/conf/spotify_credentials.py
+
 # VSCode
 .vscode/
 
