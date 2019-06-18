@@ -17,6 +17,6 @@ credentials = {
   "client_id": '<Your Client ID>',
   "client_secret": '<Your Client Secret>',
   "scope": '<Your Scope>',
-  "redirect_url": '<Your Redirect URL Route'>
+  "redirect_url": '<Your Redirect URL Route>'
 }
 ```
