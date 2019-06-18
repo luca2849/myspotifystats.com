@@ -7,5 +7,16 @@ It allows users to sign in through Spotify, and view their top tracks and artist
 recently played to completion.
 
 ## Security Info
-In the interest of security a file which contained a dictionary of API keys and callback urls, etc. has
+In the interest of security a file (spotify_credentials.py) which contained a dictionary of API keys and callback urls, etc. has
 been removed from this repository.
+
+## spotify_credentials.py Syntax
+Place this file in ./spotify_app/conf/spotify_credentials.py
+```py
+credentials = {
+  "client_id": '<Your Client ID>',
+  "client_secret": '<Your Client Secret>',
+  "scope": '<Your Scope>',
+  "redirect_url": '<Your Redirect URL Route'>
+}
+```
