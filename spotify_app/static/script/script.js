@@ -24,14 +24,9 @@ $('.about_button').click(function () {
     }, 1000)
 })
 $('.menu_btn').click(function () {
-    document.querySelector('.menu').style.transition = "all 0.5s";
-    document.querySelector('.menu').style.display = "block";
-    document.querySelector('.menu').style.width = "75vw";
-    document.querySelector('.menu_btn').style.display = "none";
+    $('.menu').toggleClass("open", 500);
+
 })
 $('.menu_close_btn').click(function () {
-    document.querySelector('.menu').style.transition = "all 0.5s";
-    document.querySelector('.menu').style.display = "none";
-    document.querySelector('.menu').style.width = "0";
-    document.querySelector('.menu_btn').style.display = "block";
+    $('.menu').toggleClass("open");
 })
