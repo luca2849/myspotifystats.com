@@ -24,8 +24,7 @@ $('.about_button').click(function () {
     }, 1000)
 })
 $('.menu_btn').click(function () {
-    $('.menu').toggleClass("open", 500);
-
+    $('.menu').toggleClass("open");
 })
 $('.menu_close_btn').click(function () {
     $('.menu').toggleClass("open");
