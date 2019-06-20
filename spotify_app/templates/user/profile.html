@@ -22,7 +22,7 @@
 </section>
 <section class="section_top_tracks">
     <h2>Top Tracks</h2>
-    <div class="container non_mobile_tracks">
+    <div class="container-fluid non_mobile_tracks">
         <div class="row">
             <div class="col-md-4">
                 <h3>Last 4 Weeks</h3>
@@ -60,19 +60,13 @@
         </div>
     </div>
 <div class="container mobile_tracks">
-    <div class="btn_drop_cont">
-        <a class="btn_drop" data-toggle="collapse" data-target="#tracks_4_weeks">
+    <div class="btn_drop_cont" data-toggle="collapse" data-target="#tracks_4_weeks">
+        <a class="btn_drop" >
             <p>Last 4 Weeks <span><ion-icon name="arrow-down"></ion-icon></span></p>
         </a>
     </div>
     <div id="tracks_4_weeks" class="collapse">
         {% for track in short_user_top_tracks %}
-        <!-- <div class="track_container collapsed">
-            <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
-                <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
-                <p>{{ track.name }}</p>
-            </a>
-        </div> -->
         <div class="mob_track_container">
             <a href="{{ track.external_urls.spotify }}" class="reverse_link">
                 <img class="mob_track_img" src="{{ track.album.images[0].url }}" alt="">
@@ -83,19 +77,13 @@
     </div>
 </div>
 <div class="container mobile_tracks">
-    <div class="btn_drop_cont">
-        <a class="btn_drop" data-toggle="collapse" data-target="#tracks_6_months">
+    <div class="btn_drop_cont" data-toggle="collapse" data-target="#tracks_6_months">
+        <a class="btn_drop" >
             <p>Last 6 Months <span><ion-icon name="arrow-down"></ion-icon></span></p>
         </a>
     </div>
     <div id="tracks_6_months" class="collapse">
         {% for track in med_user_top_tracks %}
-        <!-- <div class="track_container collapsed">
-            <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
-                <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
-                <p>{{ track.name }}</p>
-            </a>
-        </div> -->
         <div class="mob_track_container">
             <a href="{{ track.external_urls.spotify }}" class="reverse_link">
                 <img class="mob_track_img" src="{{ track.album.images[0].url }}" alt="">
@@ -106,19 +94,13 @@
     </div>
 </div>
 <div class="container mobile_tracks">
-    <div class="btn_drop_cont">
-        <a class="btn_drop" data-toggle="collapse" data-target="#tracks_all_data">
+    <div class="btn_drop_cont" data-toggle="collapse" data-target="#tracks_all_data">
+        <a class="btn_drop">
             <p>All Data <span><ion-icon name="arrow-down"></ion-icon></span></p>
         </a>
     </div>
     <div id="tracks_all_data" class="collapse">
         {% for track in long_user_top_tracks %}
-        <!-- <div class="track_container collapsed">
-            <a class="reverse_link" target="_blank" href="{{ track.external_urls.spotify }}">
-                <img id="track_img" src="{{ track.album.images[0].url }}" alt="">
-                <p>{{ track.name }}</p>
-            </a>
-        </div> -->
         <div class="mob_track_container">
             <a href="{{ track.external_urls.spotify }}" class="reverse_link">
                 <img class="mob_track_img" src="{{ track.album.images[0].url }}" alt="">
@@ -131,7 +113,7 @@
 </section>
 <section class="section_top_artists">
     <h2>Top Artists</h2>
-    <div class="container non_mobile_tracks">
+    <div class="container-fluid non_mobile_tracks">
         <div class="row">
             <div class="col-md-4">
                 <h3>Last 4 Weeks</h3>
@@ -169,8 +151,8 @@
         </div>
     </div>
 <div class="container mobile_tracks">
-    <div class="btn_drop_cont">
-        <a class="btn_drop" data-toggle="collapse" data-target="#artists_4_weeks">
+    <div class="btn_drop_cont" data-toggle="collapse" data-target="#artists_4_weeks">
+        <a class="btn_drop">
             <p>Last 4 Weeks <span>
                     <ion-icon name="arrow-down"></ion-icon>
                 </span></p>
@@ -178,12 +160,6 @@
     </div>
     <div id="artists_4_weeks" class="collapse artist">
         {% for artist in short_user_top_artists %}
-        <!-- <div class="track_container collapsed">
-            <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
-                <img id="track_img" src="{{ artist.images[0].url }}" alt="">
-                <p>{{ artist.name }}</p>
-            </a>
-        </div> -->
         <div class="mob_track_container">
             <a href="{{ artist.external_urls.spotify }}" class="reverse_link">
                 <img class="mob_track_img" src="{{ artist.images[0].url }}" alt="">
@@ -194,8 +170,8 @@
     </div>
 </div>
 <div class="container mobile_tracks">
-    <div class="btn_drop_cont">
-        <a class="btn_drop" data-toggle="collapse" data-target="#artists_6_months">
+    <div class="btn_drop_cont" data-toggle="collapse" data-target="#artists_6_months">
+        <a class="btn_drop">
             <p>Last 6 Months <span>
                     <ion-icon name="arrow-down"></ion-icon>
                 </span></p>
@@ -203,12 +179,6 @@
     </div>
     <div id="artists_6_months" class="collapse artist">
         {% for artist in med_user_top_artists %}
-        <!-- <div class="track_container collapsed">
-            <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
-                <img id="track_img" src="{{ artist.images[0].url }}" alt="">
-                <p>{{ artist.name }}</p>
-            </a>
-        </div> -->
         <div class="mob_track_container">
             <a href="{{ artist.external_urls.spotify }}" class="reverse_link">
                 <img class="mob_track_img" src="{{ artist.images[0].url }}" alt="">
@@ -219,8 +189,8 @@
     </div>
 </div>
 <div class="container mobile_tracks">
-    <div class="btn_drop_cont">
-        <a class="btn_drop" data-toggle="collapse" data-target="#artists_all_data">
+    <div class="btn_drop_cont" data-toggle="collapse" data-target="#artists_all_data">
+        <a class="btn_drop">
             <p>All Data <span>
                     <ion-icon name="arrow-down"></ion-icon>
                 </span></p>
@@ -228,12 +198,6 @@
     </div>
     <div id="artists_all_data" class="collapse artist">
         {% for artist in long_user_top_artists %}
-        <!-- <div class="track_container collapsed">
-            <a class="reverse_link" target="_blank" href="{{ artist.external_urls.spotify }}">
-                <img id="track_img" src="{{ artist.images[0].url }}" alt="">
-                <p>{{ artist.name }}</p>
-            </a>
-        </div> -->
         <div class="mob_track_container">
             <a href="{{ artist.external_urls.spotify }}" class="reverse_link">
                 <img class="mob_track_img" src="{{ artist.images[0].url }}" alt="">
