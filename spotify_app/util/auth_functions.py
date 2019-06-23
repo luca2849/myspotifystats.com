@@ -41,7 +41,7 @@ def set_user_details():
             res = resp.json()
             session["firstname"] = res["display_name"].split()[0]
             session["name"] = res["display_name"]
-            if (len(res["images"][0]) == 0):
+            if (len(res["images"]) == 0):
                 session["profile_img"] = "http://www.myspotifystats.com/default.png"
             else:
                 session["profile_img"] = res["images"][0]["url"]
