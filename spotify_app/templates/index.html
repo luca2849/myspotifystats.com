@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129516048-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-129516048-2');
-    </script>
-    <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key"></script>
-    <link rel="icon" type="image/ico" href="{{ url_for('static', filename='img/favicon.ico') }}">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,300italic" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style/media.css') }}">
-    <title>MySpotifyStats | Home</title>
-    <meta name="Description"
-        content="With MySpotifyStats you can check your favorite artists, songs, view what's playing plus much more to come.">
-    <meta name="Keywords" content="Spotify Stats Music Statistics">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-</head>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129516048-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-129516048-2');
+        </script>
+        <link rel="icon" type="image/ico" href="https://myspotifystats.com/static/img/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,300italic" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="https://myspotifystats.com/static/style/style.css">
+        <link type="text/css" rel="stylesheet" href="https://myspotifystats.com/static/style/media.css">
+        <script type="module" src="https://unpkg.com/ionicons@4.5.9-1/dist/ionicons/ionicons.esm.js"></script>
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="Description"
+            content="With MySpotifyStats you can check your favorite artists, songs, view what's playing and much more.">
+        <meta name="Keywords" content="Spotify Stats Music Statistics">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="theme-color" content="#1DB954">
+    </head>
 
 <body>
 <header>
     <div class="row top">
-        <a href="{{url_for('home')}}"><img src="{{url_for('static', filename='img/home_img.png')}}" alt="MySpotifyStats Logo" class="logo"></a>
+        <a href="{{url_for('home')}}"><img src="https://myspotifystats.com/static/img/home_img.png" alt="MySpotifyStats Logo" class="logo"></a>
         <ul class="main_nav">
             {% if session['access_token'] %}
             <li><a href="{{url_for('currently_playing')}}">Currently Playing</a></li>
@@ -206,13 +205,13 @@
     </div>
 </section> -->
 <footer>
-    <p>Luca Passariello 2019 <span id="footer_spacer">|</span><a rel="noreferrer" class="in_text_link" target="_blank" href="http://www.lucapassariello.co.uk">Portfolio</a></p>
+    <p>Luca Passariello 2019 <span id="footer_spacer">|</span><a rel="noreferrer" class="in_text_link" target="_blank"
+            href="http://www.lucapassariello.co.uk">Portfolio</a></p>
 </footer>
 <script type="module" src="https://unpkg.com/ionicons@4.5.9-1/dist/ionicons/ionicons.esm.js"></script>
-<script src="{{ url_for('static', filename='vendor/scripts/bootstrap.min.js') }}"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="{{ url_for('static', filename='vendor/scripts/jquery_ui.js') }}"></script>
-<script src="{{ url_for('static', filename='script/script.js') }}"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+<script src="https://myspotifystats.com/static/scripts/script.js"></script>
 </body>    
 </html>

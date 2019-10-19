@@ -37,7 +37,7 @@
 }
 
 .section_currently_playing {
-    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/festival.png);
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(https://myspotifystats.com/static/img/img/festival.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed
@@ -185,8 +185,8 @@ html {
 }
 
 header {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .4))), url(../img/bg2.png);
-    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(../img/bg2.png);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .4)), to(rgba(0, 0, 0, .4))), url(https://myspotifystats.com/static/img/bg2.png);
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(https://myspotifystats.com/static/img/bg2.png);
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -313,8 +313,8 @@ h2 {
 
 .section_steps {
     background-color: #f4f4f4;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .6)), to(rgba(0, 0, 0, .6))), url(../img/dave.png);
-    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/dave.png);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .6)), to(rgba(0, 0, 0, .6))), url(https://myspotifystats.com/static/img/dave.png);
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(https://myspotifystats.com/static/img/dave.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed
@@ -516,8 +516,8 @@ footer p {
 }
 
 .section_user_details {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .6)), to(rgba(0, 0, 0, .6))), url(../img/katy_perry.png);
-    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/katy_perry.png);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .6)), to(rgba(0, 0, 0, .6))), url(https://myspotifystats.com/static/img/katy_perry.png);
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(https://myspotifystats.com/static/img/katy_perry.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed
@@ -546,8 +546,8 @@ footer p {
 }
 
 .section_top_artists {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .6)), to(rgba(0, 0, 0, .6))), url(../img/jeff.png);
-    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/jeff.png);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, .6)), to(rgba(0, 0, 0, .6))), url(https://myspotifystats.com/static/img/jeff.png);
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(https://myspotifystats.com/static/img/jeff.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed
